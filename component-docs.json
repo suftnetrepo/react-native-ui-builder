@@ -344,7 +344,7 @@
       ],
       "generationHints": [
         "Use YStack as the default container for forms and section bodies.",
-        "YStack is used internally by StyledConfirmDialog and StyledOkDialog — mirror that pattern in custom dialogs."
+        "YStack is used internally by StyledConfirmDialog and StyledOkDialog \u2014 mirror that pattern in custom dialogs."
       ],
       "usagePriority": "high",
       "status": "verified",
@@ -476,7 +476,7 @@
             "true",
             "false"
           ],
-          "description": "true → gray[50], false → gray[800]"
+          "description": "true \u2192 gray[50], false \u2192 gray[800]"
         },
         {
           "name": "textDecorationLine",
@@ -485,7 +485,7 @@
             "true",
             "false"
           ],
-          "description": "true → underline, false → none"
+          "description": "true \u2192 underline, false \u2192 none"
         }
       ],
       "themeUsage": {
@@ -543,7 +543,7 @@
       ],
       "antiPatterns": [
         "Mixing raw React Native Text and StyledText without a design reason.",
-        "Passing invalid textAlign strings — the component throws on invalid values."
+        "Passing invalid textAlign strings \u2014 the component throws on invalid values."
       ],
       "relatedComponents": [
         "YStack",
@@ -645,8 +645,8 @@
         "Use the error + errorMessage props to show inline validation feedback."
       ],
       "whenNotToUse": [
-        "Do not use for long-form text — use StyledMultiInput instead.",
-        "Do not set multiline=true on StyledInput for textarea-like input — use StyledMultiInput which configures multiline, textAlignVertical, and borderRadius correctly."
+        "Do not use for long-form text \u2014 use StyledMultiInput instead.",
+        "Do not set multiline=true on StyledInput for textarea-like input \u2014 use StyledMultiInput which configures multiline, textAlignVertical, and borderRadius correctly."
       ],
       "props": [
         {
@@ -771,7 +771,7 @@
         ],
         "notes": [
           "All colors sourced from theme.colors. Font sizes from theme.fontSize.",
-          "placeholderTextColor is hardcoded to theme.colors.gray[400] — not overridable via props."
+          "placeholderTextColor is hardcoded to theme.colors.gray[400] \u2014 not overridable via props."
         ]
       },
       "examples": [
@@ -802,17 +802,17 @@
         }
       ],
       "bestPractices": [
-        "Always use the label prop instead of placing a separate StyledText above the input — it handles spacers automatically.",
-        "Pass error + errorMessage together — errorMessage alone renders nothing.",
+        "Always use the label prop instead of placing a separate StyledText above the input \u2014 it handles spacers automatically.",
+        "Pass error + errorMessage together \u2014 errorMessage alone renders nothing.",
         "Use containerProps to apply custom width, style overrides on the wrapper rather than hacking the input directly.",
         "Pair StyledInput with StyledSpacer or YStack gap for multi-field form layouts.",
         "Use editable={false} for read-only display fields rather than disabling the wrapper."
       ],
       "antiPatterns": [
-        "Using raw TextInput alongside StyledInput in the same form — breaks visual consistency.",
-        "Setting multiline=true on StyledInput — use StyledMultiInput which sets borderRadius 16, textAlignVertical, and numberOfLines correctly.",
-        "Passing error=true without errorMessage — the border turns red but no feedback text appears.",
-        "Overriding placeholderTextColor in style — it is set internally and cannot be overridden via the style prop."
+        "Using raw TextInput alongside StyledInput in the same form \u2014 breaks visual consistency.",
+        "Setting multiline=true on StyledInput \u2014 use StyledMultiInput which sets borderRadius 16, textAlignVertical, and numberOfLines correctly.",
+        "Passing error=true without errorMessage \u2014 the border turns red but no feedback text appears.",
+        "Overriding placeholderTextColor in style \u2014 it is set internally and cannot be overridden via the style prop."
       ],
       "relatedComponents": [
         "StyledMultiInput",
@@ -845,9 +845,9 @@
       ],
       "generationHints": [
         "Always use StyledInput over raw TextInput for package-first forms.",
-        "Use the label prop — it adds required spacers automatically and keeps form field layout consistent.",
+        "Use the label prop \u2014 it adds required spacers automatically and keeps form field layout consistent.",
         "Pass error={!!errors.fieldName} and errorMessage={errors.fieldName?.message} for react-hook-form integration.",
-        "For read-only fields set editable={false} — do not use a StyledText in place of a disabled input.",
+        "For read-only fields set editable={false} \u2014 do not use a StyledText in place of a disabled input.",
         "For multi-line text areas (notes, comments, descriptions) always switch to StyledMultiInput.",
         "Wrap multiple StyledInput fields in YStack with gap={12} or gap={16} for vertically spaced form layouts."
       ],
@@ -898,7 +898,7 @@
         "notes": [
           "Verified from direct full read of src/package/input/index.tsx (250 lines).",
           "All props, defaults, base styles, error/disabled states, and label layout grounded in source.",
-          "StyledInputText also exported and documented — base component reusable independently.",
+          "StyledInputText also exported and documented \u2014 base component reusable independently.",
           "Upgraded from inferred (confidence 0.55) to verified (confidence 0.97) on 2026-03-08."
         ]
       }
@@ -918,9 +918,9 @@
         "Use the error + errorMessage props for inline validation feedback."
       ],
       "whenNotToUse": [
-        "Do not use for short single-line fields — use StyledInput which has the correct borderRadius 30 and single-line defaults.",
-        "Do not pass multiline or textAlignVertical as props — they are fixed internally.",
-        "Do not use for rich text or markdown editing — it is a plain TextInput."
+        "Do not use for short single-line fields \u2014 use StyledInput which has the correct borderRadius 30 and single-line defaults.",
+        "Do not pass multiline or textAlignVertical as props \u2014 they are fixed internally.",
+        "Do not use for rich text or markdown editing \u2014 it is a plain TextInput."
       ],
       "props": [
         {
@@ -1067,17 +1067,17 @@
         }
       ],
       "bestPractices": [
-        "Always use StyledMultiInput instead of StyledInput with multiline=true — it sets borderRadius, textAlignVertical, and inputMode correctly.",
-        "Use the label prop instead of a separate StyledText — it handles spacers automatically.",
-        "Set numberOfLines to match expected content height — default 5 is appropriate for short notes; use 8+ for longer descriptions.",
-        "Pass error + errorMessage together — errorMessage alone renders nothing.",
+        "Always use StyledMultiInput instead of StyledInput with multiline=true \u2014 it sets borderRadius, textAlignVertical, and inputMode correctly.",
+        "Use the label prop instead of a separate StyledText \u2014 it handles spacers automatically.",
+        "Set numberOfLines to match expected content height \u2014 default 5 is appropriate for short notes; use 8+ for longer descriptions.",
+        "Pass error + errorMessage together \u2014 errorMessage alone renders nothing.",
         "Use containerProps to pass custom style overrides on the wrapper YStack."
       ],
       "antiPatterns": [
-        "Using StyledInput with multiline=true — it keeps borderRadius 30 and does not set textAlignVertical or inputMode.",
-        "Using a raw multiline TextInput alongside StyledMultiInput in the same form — breaks visual consistency.",
-        "Passing textAlignVertical or inputMode as props — they are set internally and will be overridden.",
-        "Setting numberOfLines=1 on StyledMultiInput — use StyledInput for single-line fields."
+        "Using StyledInput with multiline=true \u2014 it keeps borderRadius 30 and does not set textAlignVertical or inputMode.",
+        "Using a raw multiline TextInput alongside StyledMultiInput in the same form \u2014 breaks visual consistency.",
+        "Passing textAlignVertical or inputMode as props \u2014 they are set internally and will be overridden.",
+        "Setting numberOfLines=1 on StyledMultiInput \u2014 use StyledInput for single-line fields."
       ],
       "relatedComponents": [
         "StyledInput",
@@ -1109,11 +1109,11 @@
         "StyledButton"
       ],
       "generationHints": [
-        "Use StyledMultiInput for any text field where content spans multiple lines — notes, descriptions, comments, bios.",
-        "Use the label prop — it adds required spacers and keeps field layout consistent with StyledInput.",
+        "Use StyledMultiInput for any text field where content spans multiple lines \u2014 notes, descriptions, comments, bios.",
+        "Use the label prop \u2014 it adds required spacers and keeps field layout consistent with StyledInput.",
         "Pass error={!!errors.field} and errorMessage={errors.field?.message} for react-hook-form integration.",
         "Set numberOfLines based on expected content: 4-5 for short notes, 6-8 for medium descriptions, 10+ for long content.",
-        "Do not use for single-line fields — borderRadius 16 and vertical text alignment will look incorrect."
+        "Do not use for single-line fields \u2014 borderRadius 16 and vertical text alignment will look incorrect."
       ],
       "usagePriority": "medium",
       "status": "verified",
@@ -1134,7 +1134,7 @@
           "name": "MultiInputProps",
           "kind": "interface",
           "signature": "MultiInputProps extends Omit<TextInputProps, 'ref'>",
-          "summary": "Adds label, labelProps, containerProps, errorMessage, error, errorProps, borderColor, numberOfLines on top of RN TextInputProps. Note: multiline is not in MultiInputProps — it is set internally."
+          "summary": "Adds label, labelProps, containerProps, errorMessage, error, errorProps, borderColor, numberOfLines on top of RN TextInputProps. Note: multiline is not in MultiInputProps \u2014 it is set internally."
         }
       ],
       "embeddingText": "StyledMultiInput is the multi-line textarea input in fluent-styles. Forces multiline=true, textAlignVertical=top, inputMode=text. borderRadius 16 (overrides base 30). Default numberOfLines=5. Supports label (auto-spaced), error state (red-500 border + message), disabled state (0.6 opacity), and custom borderColor. Export confirmed in src/index.ts from src/package/input/index.tsx. Verified from direct source inspection.",
@@ -1156,7 +1156,7 @@
           "Verified from direct full read of src/package/input/index.tsx (250 lines).",
           "All props, defaults, base styles, error/disabled states, and label layout grounded in source.",
           "Key distinction from StyledInput: borderRadius 16 (not 30), textAlignVertical=top, inputMode='text', multiline forced internally.",
-          "multiline is NOT in MultiInputProps — it is fixed to true inside the component.",
+          "multiline is NOT in MultiInputProps \u2014 it is fixed to true inside the component.",
           "Upgraded from inferred (confidence 0.55) to verified (confidence 0.97) on 2026-03-08."
         ]
       }
@@ -1219,7 +1219,7 @@
             "dark",
             "veryDark"
           ],
-          "description": "Shadow depth. iOS: shadowOffset/opacity/radius. Android: elevation 1–20."
+          "description": "Shadow depth. iOS: shadowOffset/opacity/radius. Android: elevation 1\u201320."
         }
       ],
       "themeUsage": {
@@ -1260,7 +1260,7 @@
         "Use pressable=true only when the entire card is interactive."
       ],
       "antiPatterns": [
-        "Passing pressableProps without setting pressable=true — the Pressable wrapper is not rendered.",
+        "Passing pressableProps without setting pressable=true \u2014 the Pressable wrapper is not rendered.",
         "Using StyledCard as a modal overlay."
       ],
       "relatedComponents": [
@@ -1287,7 +1287,7 @@
         "Use StyledCard for bounded surface sections.",
         "Place YStack inside StyledCard for readable vertical rhythm.",
         "Use pressable=true with pressableProps for tappable list tiles.",
-        "shadow prop accepts 6 levels — prefer 'medium' for standard cards."
+        "shadow prop accepts 6 levels \u2014 prefer 'medium' for standard cards."
       ],
       "usagePriority": "high",
       "status": "verified",
@@ -1349,8 +1349,8 @@
         "Use when StyledConfirmDialog or StyledOkDialog are too opinionated for the workflow."
       ],
       "whenNotToUse": [
-        "Do not use for confirm/cancel flows — prefer StyledConfirmDialog.",
-        "Do not use for single-action acknowledgement — prefer StyledOkDialog.",
+        "Do not use for confirm/cancel flows \u2014 prefer StyledConfirmDialog.",
+        "Do not use for single-action acknowledgement \u2014 prefer StyledOkDialog.",
         "Do not use for full-screen navigation flows."
       ],
       "props": [
@@ -1451,7 +1451,7 @@
         "Use StyledDialog for custom modal layouts.",
         "Mirror the YStack centering pattern used inside ConfirmDialogContent for consistent modal panels.",
         "Prefer transparent=true and a gray[50] inner panel for standard modal look.",
-        "animationType defaults to 'fade' — override to 'slide' for bottom-sheet style."
+        "animationType defaults to 'fade' \u2014 override to 'slide' for bottom-sheet style."
       ],
       "usagePriority": "medium",
       "status": "verified",
@@ -1847,7 +1847,7 @@
         },
         {
           "title": "Default error dialog",
-          "description": "All defaults applied — useful for generic unhandled error boundaries.",
+          "description": "All defaults applied \u2014 useful for generic unhandled error boundaries.",
           "code": "import { StyledOkDialog } from 'fluent-styles';\n\n<StyledOkDialog\n  visible={hasError}\n  onOk={() => setHasError(false)}\n/>;"
         }
       ],
@@ -1857,7 +1857,7 @@
         "Use okLabel to match the affirmative context: 'Got it', 'Done', 'Great!'."
       ],
       "antiPatterns": [
-        "Using StyledOkDialog for destructive confirmation — users cannot cancel.",
+        "Using StyledOkDialog for destructive confirmation \u2014 users cannot cancel.",
         "Leaving visible permanently true without wiring onOk to update state."
       ],
       "relatedComponents": [
@@ -1883,7 +1883,7 @@
       ],
       "generationHints": [
         "Prefer StyledOkDialog for error boundaries and success toasts that need a modal.",
-        "All props are optional — the dialog works out of the box with only visible and onOk.",
+        "All props are optional \u2014 the dialog works out of the box with only visible and onOk.",
         "OK button is cyan, full-width, with centered bold text.",
         "Dialog closes automatically before calling onOk callback."
       ],
@@ -1944,7 +1944,7 @@
         "Use the padded prop to apply consistent screen-edge spacing without extra wrappers."
       ],
       "whenNotToUse": [
-        "Do not nest StyledScrollView inside another ScrollView — use FlatList or SectionList for long virtualized lists.",
+        "Do not nest StyledScrollView inside another ScrollView \u2014 use FlatList or SectionList for long virtualized lists.",
         "Do not use when content fits in the viewport without scrolling; prefer YStack instead.",
         "Do not use HorizontalScrollView for large lists; prefer a horizontal FlatList."
       ],
@@ -2016,7 +2016,7 @@
       "variants": [
         {
           "name": "light",
-          "description": "White background — default, suitable for most screens."
+          "description": "White background \u2014 default, suitable for most screens."
         },
         {
           "name": "dark",
@@ -2032,7 +2032,7 @@
         },
         {
           "name": "transparent",
-          "description": "No background — allow parent background to show through."
+          "description": "No background \u2014 allow parent background to show through."
         }
       ],
       "themeUsage": {
@@ -2076,9 +2076,9 @@
         "Pair with KeyboardAvoidingView (also from fluent-styles) when the scroll view contains form inputs."
       ],
       "antiPatterns": [
-        "Nesting StyledScrollView inside another scrollable — causes scroll conflict on Android.",
-        "Applying flex:0 to StyledScrollView — breaks the flex:1 default and clips content.",
-        "Using raw RN ScrollView inside fluent-styles screens — breaks theme and spacing consistency."
+        "Nesting StyledScrollView inside another scrollable \u2014 causes scroll conflict on Android.",
+        "Applying flex:0 to StyledScrollView \u2014 breaks the flex:1 default and clips content.",
+        "Using raw RN ScrollView inside fluent-styles screens \u2014 breaks theme and spacing consistency."
       ],
       "relatedComponents": [
         "HorizontalScrollView",
@@ -2106,7 +2106,7 @@
         "KeyboardAvoidingView"
       ],
       "generationHints": [
-        "Wrap every long-form screen content in StyledScrollView padded='medium' — never in raw RN ScrollView.",
+        "Wrap every long-form screen content in StyledScrollView padded='medium' \u2014 never in raw RN ScrollView.",
         "Use HorizontalScrollView for horizontal card rows or chip/filter strips.",
         "Do not nest StyledScrollView; delegate long lists to FlatList or SectionList for virtualization.",
         "Pair StyledScrollView with StyledSafeAreaView at the root and KeyboardAvoidingView when forms are present."
@@ -2128,13 +2128,13 @@
           "name": "StyledScrollViewProps",
           "kind": "interface",
           "signature": "StyledScrollViewProps extends ScrollViewProps",
-          "summary": "Props for StyledScrollView — extends RN ScrollViewProps with variant, padded, flex, and backgroundColor."
+          "summary": "Props for StyledScrollView \u2014 extends RN ScrollViewProps with variant, padded, flex, and backgroundColor."
         },
         {
           "name": "HorizontalScrollViewProps",
           "kind": "interface",
           "signature": "HorizontalScrollViewProps extends Omit<StyledScrollViewProps, 'horizontal'>",
-          "summary": "Props for HorizontalScrollView — same as StyledScrollViewProps but horizontal is fixed to true."
+          "summary": "Props for HorizontalScrollView \u2014 same as StyledScrollViewProps but horizontal is fixed to true."
         }
       ],
       "embeddingText": "StyledScrollView is the primary vertical scroll container in fluent-styles. It supports theme variants (light, dark, primary, surface, transparent), padded sizes (small, medium, large), scroll indicator control, and custom backgroundColor. HorizontalScrollView is a sibling export for horizontal carousels. Export confirmed in src/index.ts from src/package/scrollView/index.tsx. Use as the default scrollable screen wrapper.",
@@ -2173,7 +2173,7 @@
         "Use PressableGroup for segmented controls, tab bars, or button groups with single-select state."
       ],
       "whenNotToUse": [
-        "Do not use Pressable for primary form submission — use StyledButton instead.",
+        "Do not use Pressable for primary form submission \u2014 use StyledButton instead.",
         "Do not pass raw onPress to non-interactive View; always use Pressable for touchable semantics.",
         "Do not mix PressableGroup with external single-select state without passing selectedId."
       ],
@@ -2293,7 +2293,7 @@
         },
         {
           "name": "ghost",
-          "description": "Transparent background with gray-100 pressed overlay — for icon or text-only actions."
+          "description": "Transparent background with gray-100 pressed overlay \u2014 for icon or text-only actions."
         }
       ],
       "themeUsage": {
@@ -2323,7 +2323,7 @@
         ],
         "typography": [],
         "notes": [
-          "All colors sourced from theme.colors. No direct theme.spacing consumption — sizes are hardcoded presets."
+          "All colors sourced from theme.colors. No direct theme.spacing consumption \u2014 sizes are hardcoded presets."
         ]
       },
       "examples": [
@@ -2355,9 +2355,9 @@
         "Use PressableGroup for tab/segment patterns to centralize selection state."
       ],
       "antiPatterns": [
-        "Wrapping a Pressable in a TouchableOpacity — double touch handling causes visual glitches.",
+        "Wrapping a Pressable in a TouchableOpacity \u2014 double touch handling causes visual glitches.",
         "Using Pressable for long lists of tappable rows; use FlatList + Pressable per row instead.",
-        "Omitting accessibilityRole — it defaults to 'button' but always verify for non-button use cases."
+        "Omitting accessibilityRole \u2014 it defaults to 'button' but always verify for non-button use cases."
       ],
       "relatedComponents": [
         "PressableText",
@@ -2387,7 +2387,7 @@
       ],
       "generationHints": [
         "Use Pressable for any custom touchable area that StyledButton's opinionated border/radius doesn't suit.",
-        "For icon-only tap targets always use PressableIcon — it handles sizing, rounding, and accessibility defaults.",
+        "For icon-only tap targets always use PressableIcon \u2014 it handles sizing, rounding, and accessibility defaults.",
         "For row/column tab-like selections export PressableGroup with selectedId bound to local state.",
         "Always pass variant='ghost' for pressables embedded inside StyledCard to avoid background conflict.",
         "Pair scale=true and opacity=true for animated feedback on prominent actions."
@@ -2429,7 +2429,7 @@
           "name": "PressableGroupProps",
           "kind": "interface",
           "signature": "PressableGroupProps",
-          "summary": "Props for PressableGroup — items array, selectedId, direction, gap, variant, disabled."
+          "summary": "Props for PressableGroup \u2014 items array, selectedId, direction, gap, variant, disabled."
         }
       ],
       "embeddingText": "Pressable is the touch interaction primitive in fluent-styles. It wraps RN Pressable with 6 color variants, 3 sizes, 5 border radius presets, press/hover opacity and scale feedback, and built-in accessibility. Sub-exports PressableText, PressableIcon, PressableGroup. Export confirmed in src/index.ts from src/package/pressable/index.tsx.",
@@ -2460,7 +2460,7 @@
       "importPath": "fluent-styles",
       "exportName": "StyledButton",
       "docType": "overview",
-      "summary": "TouchableOpacity-based styled button primitive with link and selected boolean variants. Designed as a low-level building block for composed button UI — not a full-featured button with label; use Pressable or PressableText for richer interaction patterns. Also exports the unwrapped Button styled component for direct use.",
+      "summary": "TouchableOpacity-based styled button primitive with link and selected boolean variants. Designed as a low-level building block for composed button UI \u2014 not a full-featured button with label; use Pressable or PressableText for richer interaction patterns. Also exports the unwrapped Button styled component for direct use.",
       "whenToUse": [
         "Use StyledButton as the base touchable with border, radius, and background defaults when composing custom button rows or cells.",
         "Use Button directly when you need the raw styled primitive without the forwardRef wrapper.",
@@ -2468,9 +2468,9 @@
         "Use the selected variant for tab-like or toggle-button states with cyan highlight."
       ],
       "whenNotToUse": [
-        "Do not use StyledButton for icon-only buttons — use PressableIcon instead.",
+        "Do not use StyledButton for icon-only buttons \u2014 use PressableIcon instead.",
         "Do not expect a built-in label or icon; StyledButton renders its children directly.",
-        "Do not use for primary submit buttons with rich label+icon layouts — compose using Pressable + StyledText."
+        "Do not use for primary submit buttons with rich label+icon layouts \u2014 compose using Pressable + StyledText."
       ],
       "props": [
         {
@@ -2535,7 +2535,7 @@
         },
         {
           "title": "Link variant for navigation CTA",
-          "description": "Renders a transparent, borderless pressable — ideal for text links.",
+          "description": "Renders a transparent, borderless pressable \u2014 ideal for text links.",
           "code": "import { StyledButton, StyledText } from 'fluent-styles';\n\n<StyledButton link onPress={navigateToProfile}>\n  <StyledText color=\"#3b82f6\">View Profile</StyledText>\n</StyledButton>"
         },
         {
@@ -2550,14 +2550,14 @@
         }
       ],
       "bestPractices": [
-        "Pass explicit paddingHorizontal and paddingVertical to StyledButton — it ships without padding defaults.",
+        "Pass explicit paddingHorizontal and paddingVertical to StyledButton \u2014 it ships without padding defaults.",
         "Always wrap text in StyledText inside StyledButton for typography consistency.",
         "Use link variant for secondary text-link CTAs to avoid background or border rendering.",
         "Prefer selected variant for toggle/tab state over managing backgroundColor directly."
       ],
       "antiPatterns": [
-        "Using StyledButton as a full-featured named button — it has no default label; compose your own.",
-        "Supplying nested Touchables inside StyledButton — causes Android press event conflicts.",
+        "Using StyledButton as a full-featured named button \u2014 it has no default label; compose your own.",
+        "Supplying nested Touchables inside StyledButton \u2014 causes Android press event conflicts.",
         "Relying on the default borderRadius=30 for all contexts; override per design requirement."
       ],
       "relatedComponents": [
@@ -2590,7 +2590,7 @@
         "Use link={true} to produce text-link CTAs without any background or border.",
         "Use selected={activeTab === id} to drive active tab or toggle visual state.",
         "For primary action buttons with rich layouts prefer Pressable or PressableText.",
-        "Always supply explicit padding — StyledButton has no padding in its base styles."
+        "Always supply explicit padding \u2014 StyledButton has no padding in its base styles."
       ],
       "usagePriority": "high",
       "status": "verified",
@@ -2616,10 +2616,10 @@
           "name": "ButtonProps",
           "kind": "type",
           "signature": "ButtonProps = ButtonVariants & TouchableOpacityProps & ViewStyle",
-          "summary": "Full prop surface for Button — merges variants, TouchableOpacity props, and ViewStyle spread."
+          "summary": "Full prop surface for Button \u2014 merges variants, TouchableOpacity props, and ViewStyle spread."
         }
       ],
-      "embeddingText": "StyledButton is a TouchableOpacity-based button primitive in fluent-styles with link and selected variants. Designed for composition — children are rendered directly. Also exports unwrapped Button for direct use. Export confirmed in src/index.ts from src/package/button/index.tsx.",
+      "embeddingText": "StyledButton is a TouchableOpacity-based button primitive in fluent-styles with link and selected variants. Designed for composition \u2014 children are rendered directly. Also exports unwrapped Button for direct use. Export confirmed in src/index.ts from src/package/button/index.tsx.",
       "rawContent": "Component StyledButton and Button. Category interaction. Exported from fluent-styles via src/index.ts. Source: src/package/button/index.tsx. Variants: link, selected. Related: Pressable, PressableText, StyledText.",
       "metadata": {
         "platform": [
@@ -2655,7 +2655,7 @@
       ],
       "whenNotToUse": [
         "Do not use StyledSpacer inside Stack/XStack/YStack when the gap prop on the parent achieves the same result.",
-        "Do not use for semantic structural layout — it is purely a visual spacer.",
+        "Do not use for semantic structural layout \u2014 it is purely a visual spacer.",
         "Do not render multiple adjacent spacers; consolidate into a single height or marginVertical."
       ],
       "props": [
@@ -2760,7 +2760,7 @@
           "code": "import { StyledSpacer } from 'fluent-styles';\n\n<StyledSpacer marginHorizontal={16} />"
         },
         {
-          "title": "Flex spacer — push items to edges",
+          "title": "Flex spacer \u2014 push items to edges",
           "description": "Distributes space between header title and action button.",
           "code": "import { XStack, StyledSpacer, StyledText, PressableIcon } from 'fluent-styles';\n\n<XStack alignItems=\"center\">\n  <StyledText fontWeight=\"bold\" fontSize={18}>Orders</StyledText>\n  <StyledSpacer flex={1} />\n  <PressableIcon icon={<FilterIcon />} variant=\"ghost\" onPress={openFilters} />\n</XStack>"
         }
@@ -2771,9 +2771,9 @@
         "Use flex={1} spacer pattern to separate label+action pairs in a row layout."
       ],
       "antiPatterns": [
-        "Using StyledSpacer inside a parent that already has gap — results in compounded spacing.",
-        "Using multiple adjacent StyledSpacers — collapse into a single spacer with the total size.",
-        "Replacing StyledSpacer with empty View inline styles — breaks the package-first convention."
+        "Using StyledSpacer inside a parent that already has gap \u2014 results in compounded spacing.",
+        "Using multiple adjacent StyledSpacers \u2014 collapse into a single spacer with the total size.",
+        "Replacing StyledSpacer with empty View inline styles \u2014 breaks the package-first convention."
       ],
       "relatedComponents": [
         "YStack",
@@ -2824,7 +2824,7 @@
         }
       ],
       "embeddingText": "StyledSpacer is a layout utility in fluent-styles for adding precise spacing between elements. Accepts marginHorizontal, marginVertical, margin, padding, width, height, flex, and gap. Use height for fixed vertical gaps, flex=1 for greedy spacer rows. Export confirmed in src/index.ts from src/package/spacer/index.tsx.",
-      "rawContent": "Component StyledSpacer. Category layout. Exported from fluent-styles via src/index.ts. Source: src/package/spacer/index.tsx. Spacing utility — height, width, margin, flex. Related: YStack, XStack, Stack.",
+      "rawContent": "Component StyledSpacer. Category layout. Exported from fluent-styles via src/index.ts. Source: src/package/spacer/index.tsx. Spacing utility \u2014 height, width, margin, flex. Related: YStack, XStack, Stack.",
       "metadata": {
         "platform": [
           "react-native"
@@ -2860,9 +2860,9 @@
         "Use BadgeWithIcon when the badge needs a leading or trailing icon alongside the label."
       ],
       "whenNotToUse": [
-        "Do not use Badge as a navigation chip or action button — it renders a Text, not a Touchable.",
+        "Do not use Badge as a navigation chip or action button \u2014 it renders a Text, not a Touchable.",
         "Do not use CounterBadge for large statistical counts (>999); use StyledText directly.",
-        "Do not use BadgeIcon without an icon prop — the component only renders the count overlay when icon is present."
+        "Do not use BadgeIcon without an icon prop \u2014 the component only renders the count overlay when icon is present."
       ],
       "props": [
         {
@@ -3039,15 +3039,15 @@
         }
       ],
       "bestPractices": [
-        "Use the variant that semantically matches the state — success for positive, danger for errors, warning for caution.",
-        "Use CounterBadge instead of Badge with a number string for counts — it handles showZero and maxCount.",
+        "Use the variant that semantically matches the state \u2014 success for positive, danger for errors, warning for caution.",
+        "Use CounterBadge instead of Badge with a number string for counts \u2014 it handles showZero and maxCount.",
         "Use absolute={true} with top/right for notification overlays so the badge floats over its parent.",
-        "Keep badge labels concise — 1 to 3 words or a number."
+        "Keep badge labels concise \u2014 1 to 3 words or a number."
       ],
       "antiPatterns": [
-        "Using Badge as a pressable chip — wrap in Pressable if tappable behavior is needed.",
+        "Using Badge as a pressable chip \u2014 wrap in Pressable if tappable behavior is needed.",
         "Hardcoding backgroundColor/color when a semantic variant exists.",
-        "Using raw Text with custom styles for status chips — Badge provides consistent sizing and theming."
+        "Using raw Text with custom styles for status chips \u2014 Badge provides consistent sizing and theming."
       ],
       "relatedComponents": [
         "BadgeWithIcon",
@@ -3080,9 +3080,9 @@
       ],
       "generationHints": [
         "Use Badge variant='success'|'warning'|'danger'|'info' for order/transaction/user status chips in list rows.",
-        "Use CounterBadge for notification counts on icons — it handles zero-hiding and maxCount truncation automatically.",
+        "Use CounterBadge for notification counts on icons \u2014 it handles zero-hiding and maxCount truncation automatically.",
         "Use BadgeIcon to wrap any icon that needs a float-count overlay (notifications bell, cart icon, etc.).",
-        "Use StatusBadge for user profile presence — it self-manages the dot color and label from status enum.",
+        "Use StatusBadge for user profile presence \u2014 it self-manages the dot color and label from status enum.",
         "Place Badge with absolute={true} and top/right offsets inside a relative-positioned parent container."
       ],
       "usagePriority": "high",
@@ -3170,10 +3170,10 @@
         "Use defaultValue for uncontrolled one-time defaults (e.g., pre-filled edit forms)."
       ],
       "whenNotToUse": [
-        "Do not use Dropdown for lists longer than ~50 items without server-side filtering — the FlatList inside the modal is not virtualized beyond its own scroll.",
-        "Do not use for boolean toggles — use Switch or CheckBox instead.",
-        "Do not use Dropdown inside another Modal — nested modals behave inconsistently on Android.",
-        "Do not use when inline radio buttons would be clearer for 2–4 options."
+        "Do not use Dropdown for lists longer than ~50 items without server-side filtering \u2014 the FlatList inside the modal is not virtualized beyond its own scroll.",
+        "Do not use for boolean toggles \u2014 use Switch or CheckBox instead.",
+        "Do not use Dropdown inside another Modal \u2014 nested modals behave inconsistently on Android.",
+        "Do not use when inline radio buttons would be clearer for 2\u20134 options."
       ],
       "props": [
         {
@@ -3236,11 +3236,11 @@
       "variants": [
         {
           "name": "Dropdown",
-          "description": "Single-select — onChange receives a single DropdownOptionItem."
+          "description": "Single-select \u2014 onChange receives a single DropdownOptionItem."
         },
         {
           "name": "MultiSelectDropdown",
-          "description": "Multi-select — onChange receives DropdownOptionItem[]. Adds checkboxes and Select All row. Extra prop: separator (string, default ', ') for display label when multiple selected."
+          "description": "Multi-select \u2014 onChange receives DropdownOptionItem[]. Adds checkboxes and Select All row. Extra prop: separator (string, default ', ') for display label when multiple selected."
         }
       ],
       "themeUsage": {
@@ -3285,7 +3285,7 @@
         {
           "title": "Multi-select dropdown",
           "description": "User can select multiple items with checkboxes.",
-          "code": "import { useState } from 'react';\nimport { MultiSelectDropdown } from 'fluent-styles';\nimport type { DropdownOptionItem } from 'fluent-styles';\n\nconst [selected, setSelected] = useState<DropdownOptionItem[]>([]);\n\n<MultiSelectDropdown\n  data={options}\n  placeholder=\"Select categories\"\n  value={selected}\n  onChange={setSelected}\n  separator=\" · \"\n/>"
+          "code": "import { useState } from 'react';\nimport { MultiSelectDropdown } from 'fluent-styles';\nimport type { DropdownOptionItem } from 'fluent-styles';\n\nconst [selected, setSelected] = useState<DropdownOptionItem[]>([]);\n\n<MultiSelectDropdown\n  data={options}\n  placeholder=\"Select categories\"\n  value={selected}\n  onChange={setSelected}\n  separator=\" \u00b7 \"\n/>"
         },
         {
           "title": "Disabled dropdown",
@@ -3294,16 +3294,16 @@
         }
       ],
       "bestPractices": [
-        "Always type the data array as DropdownOptionItem[] — the library imports this type from fluent-styles.",
+        "Always type the data array as DropdownOptionItem[] \u2014 the library imports this type from fluent-styles.",
         "Use controlled mode (value + onChange) in forms managed by react-hook-form or local reducer state.",
         "Set maxHeight to control the visible option list height and prevent the menu from overflowing the screen.",
-        "Ensure react-native-vector-icons is linked in the consuming app — Dropdown depends on MaterialIcons."
+        "Ensure react-native-vector-icons is linked in the consuming app \u2014 Dropdown depends on MaterialIcons."
       ],
       "antiPatterns": [
-        "Passing value as DropdownOptionItem.value (id string) — it expects DropdownOptionItem.label.",
-        "Assuming onChange in MultiSelectDropdown returns a single item — it returns DropdownOptionItem[].",
-        "Nesting Dropdown inside a ScrollView that also handles vertical gestures — can cause scroll event conflicts on Android.",
-        "Using Dropdown for 2-option boolean choices — Switch or two Pressable buttons are clearer."
+        "Passing value as DropdownOptionItem.value (id string) \u2014 it expects DropdownOptionItem.label.",
+        "Assuming onChange in MultiSelectDropdown returns a single item \u2014 it returns DropdownOptionItem[].",
+        "Nesting Dropdown inside a ScrollView that also handles vertical gestures \u2014 can cause scroll event conflicts on Android.",
+        "Using Dropdown for 2-option boolean choices \u2014 Switch or two Pressable buttons are clearer."
       ],
       "relatedComponents": [
         "MultiSelectDropdown",
@@ -3335,9 +3335,9 @@
         "Separator"
       ],
       "generationHints": [
-        "Use Dropdown for single-value form fields — category picker, sort order, status filter.",
+        "Use Dropdown for single-value form fields \u2014 category picker, sort order, status filter.",
         "Use MultiSelectDropdown for filter panels where multiple values can be selected simultaneously.",
-        "Always import DropdownOptionItem type and type the data array — avoids runtime shape mismatches.",
+        "Always import DropdownOptionItem type and type the data array \u2014 avoids runtime shape mismatches.",
         "Wrap Dropdown in a YStack with a StyledText label above for accessible form field layout.",
         "Pass value + onChange for controlled mode; use defaultValue only for pre-filled display with no external state."
       ],
@@ -3396,8 +3396,2476 @@
         "notes": [
           "Both Dropdown and MultiSelectDropdown verified from full source read (696 lines) and index.ts.",
           "Stories confirmed controlled, uncontrolled, disabled, and defaultValue patterns.",
-          "Note: DropdownProps extends ViewStyle — consumer can pass ViewStyle props directly as spread to the trigger container, which is an unusual pattern."
+          "Note: DropdownProps extends ViewStyle \u2014 consumer can pass ViewStyle props directly as spread to the trigger container, which is an unusual pattern."
         ]
+      }
+    },
+    {
+      "id": "navigation-accordion-overview",
+      "componentName": "Accordion",
+      "category": "navigation",
+      "importPath": "fluent-styles",
+      "exportName": "Accordion",
+      "docType": "overview",
+      "summary": "Expandable accordion component that renders a list of collapsible content sections with animated transitions, single or multiple selection, and three style variants.",
+      "whenToUse": [
+        "Use when presenting a list of FAQ-style sections or collapsible categories.",
+        "Use when screen real estate is limited and content can be progressively disclosed.",
+        "Use for settings pages, help content, or grouped information.",
+        "Use when content sections need single or multiple open state management."
+      ],
+      "whenNotToUse": [
+        "Do not use for tab-style navigation where all sections are equally accessible.",
+        "Do not use when content is short enough to be shown without collapsing.",
+        "Do not use for navigation between separate screens; use navigation primitives instead."
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "AccordionItemConfig[]",
+          "required": true,
+          "defaultValue": null,
+          "description": "Array of accordion items, each with id, title, and content (string or ReactNode)."
+        },
+        {
+          "name": "value",
+          "type": "string | string[]",
+          "required": false,
+          "defaultValue": null,
+          "description": "Controlled expanded item id(s). Use with onChange for controlled usage."
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | string[]",
+          "required": false,
+          "defaultValue": null,
+          "description": "Default expanded item id(s) for uncontrolled usage."
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string | string[]) => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Callback fired when an item is expanded or collapsed."
+        },
+        {
+          "name": "collapsible",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "true",
+          "description": "When true, allows all items to be collapsed. When false, at least one item stays open."
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "When true, allows multiple items to be open simultaneously."
+        },
+        {
+          "name": "variant",
+          "type": "'default' | 'filled' | 'outline'",
+          "required": false,
+          "defaultValue": "'default'",
+          "description": "Visual style variant. default: white background, filled: gray[50] background, outline: bordered."
+        }
+      ],
+      "variants": [
+        {
+          "name": "default",
+          "description": "White background, no border on the item header."
+        },
+        {
+          "name": "filled",
+          "description": "Gray[50] background on header and content."
+        },
+        {
+          "name": "outline",
+          "description": "White background with a gray[200] border around header and content."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "gray[50]",
+          "gray[200]",
+          "gray[600]",
+          "gray[900]",
+          "white"
+        ],
+        "sizes": [],
+        "spacing": [
+          "paddingHorizontal: 16",
+          "paddingVertical: 14",
+          "marginBottom: 12"
+        ],
+        "radii": [
+          "borderRadius: 8"
+        ],
+        "typography": [
+          "fontSize: 16",
+          "fontWeight: 600",
+          "fontSize: 14"
+        ],
+        "notes": [
+          "Uses theme.colors for header background and text colors based on variant."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Basic uncontrolled accordion",
+          "description": "Simple accordion with three items, collapsible, single selection.",
+          "code": "import { Accordion } from 'fluent-styles';\n\nconst items = [\n  { id: '1', title: 'What is React?', content: 'React is a JavaScript library...' },\n  { id: '2', title: 'What is TypeScript?', content: 'TypeScript is a typed superset...' },\n  { id: '3', title: 'What is React Native?', content: 'React Native is a framework...' },\n];\n\n<Accordion items={items} defaultValue=\"1\" />"
+        },
+        {
+          "title": "Controlled accordion",
+          "description": "Controlled accordion with external state management.",
+          "code": "import { useState } from 'react';\nimport { Accordion } from 'fluent-styles';\n\nconst [expanded, setExpanded] = useState('1');\n\n<Accordion\n  items={items}\n  value={expanded}\n  onChange={(id) => setExpanded(id as string)}\n/>"
+        },
+        {
+          "title": "Multiple selection accordion",
+          "description": "Allow multiple items open at once.",
+          "code": "import { Accordion } from 'fluent-styles';\n\n<Accordion\n  items={items}\n  multiple={true}\n  defaultValue={['1', '2']}\n  variant=\"filled\"\n/>"
+        },
+        {
+          "title": "Outline variant",
+          "description": "Bordered outline style.",
+          "code": "import { Accordion } from 'fluent-styles';\n\n<Accordion items={items} variant=\"outline\" />"
+        }
+      ],
+      "bestPractices": [
+        "Provide unique stable string ids for each AccordionItemConfig item.",
+        "Use defaultValue for uncontrolled and value+onChange for controlled usage.",
+        "Prefer ReactNode content over plain strings for rich section content.",
+        "Use multiple={true} only when sections are truly independent."
+      ],
+      "antiPatterns": [
+        "Do not set multiple={true} and supply a string defaultValue \u2014 use an array.",
+        "Do not use Accordion for primary navigation; use tab or drawer navigation."
+      ],
+      "relatedComponents": [
+        "Pressable",
+        "StyledText",
+        "YStack"
+      ],
+      "retrievalKeywords": [
+        "accordion",
+        "expandable",
+        "collapsible",
+        "faq",
+        "disclosure",
+        "sections",
+        "toggle"
+      ],
+      "composesWith": [
+        "YStack",
+        "StyledText",
+        "Pressable"
+      ],
+      "generationHints": [
+        "Import Accordion from 'fluent-styles'.",
+        "Always provide items as AccordionItemConfig[] with unique ids.",
+        "Use defaultValue to open items by default in uncontrolled mode.",
+        "Use variant='filled' for settings-style accordions.",
+        "Use variant='outline' for card-like bordered accordions."
+      ],
+      "usagePriority": "medium",
+      "status": "verified",
+      "tags": [
+        "accordion",
+        "collapsible",
+        "expandable",
+        "navigation",
+        "list"
+      ],
+      "sourceFiles": [
+        "src/package/accordion/index.tsx",
+        "src/index.ts",
+        "storyBook/demo/.rnstorybook/stories/Accordion.stories.tsx"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "AccordionProps",
+          "kind": "interface",
+          "signature": "AccordionProps",
+          "summary": "Props for the Accordion component including items, controlled state, and variant."
+        },
+        {
+          "name": "AccordionItemConfig",
+          "kind": "interface",
+          "signature": "{ id: string; title: string; content: ReactNode | string }",
+          "summary": "Configuration object for each accordion item."
+        }
+      ],
+      "embeddingText": "Accordion is a fluent-styles collapsible content component. It renders a list of expandable sections with animated transitions. Supports default, filled, and outline variants. Supports single and multiple selection. Accepts items as AccordionItemConfig[]. Export confirmed in src/index.ts.",
+      "rawContent": "Component Accordion. Category navigation. Exported from fluent-styles via src/index.ts. Source: src/package/accordion/index.tsx. Expandable accordion with variants: default, filled, outline. Multiple and collapsible modes. Related: Pressable, StyledText, YStack.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Props, variants, and examples grounded in source code and Storybook stories."
+      }
+    },
+    {
+      "id": "form-checkbox-overview",
+      "componentName": "CheckBox",
+      "category": "form",
+      "importPath": "fluent-styles",
+      "exportName": "CheckBox",
+      "docType": "overview",
+      "summary": "Checkbox input component with controlled/uncontrolled state, customizable colors, flexible sizing, disabled state, and MaterialIcons checkmark.",
+      "whenToUse": [
+        "Use for boolean form fields like accept terms, enable feature, multi-select options.",
+        "Use when users need to toggle individual options independently.",
+        "Use in lists where multiple items can be selected simultaneously."
+      ],
+      "whenNotToUse": [
+        "Do not use CheckBox for mutually exclusive single-select options; use RadioButton instead.",
+        "Do not use when a Switch better communicates an on/off state with immediate effect."
+      ],
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Controlled checked state."
+        },
+        {
+          "name": "onCheck",
+          "type": "(checked: boolean) => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Callback fired with the new checked state when the checkbox is pressed."
+        },
+        {
+          "name": "checkedColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.blue[500]",
+          "description": "Background and border color when checked."
+        },
+        {
+          "name": "uncheckedColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[50]",
+          "description": "Background color when unchecked."
+        },
+        {
+          "name": "borderColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[300]",
+          "description": "Border color override."
+        },
+        {
+          "name": "checkMarkColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.white[500]",
+          "description": "Color of the checkmark icon."
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "required": false,
+          "defaultValue": "24",
+          "description": "Width and height of the checkbox in pixels."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Disables interaction and reduces opacity to 0.6."
+        },
+        {
+          "name": "iconName",
+          "type": "string",
+          "required": false,
+          "defaultValue": "'check'",
+          "description": "MaterialIcons icon name for the checkmark."
+        },
+        {
+          "name": "iconSize",
+          "type": "number",
+          "required": false,
+          "defaultValue": "18",
+          "description": "Size of the checkmark icon."
+        },
+        {
+          "name": "iconProps",
+          "type": "any",
+          "required": false,
+          "defaultValue": null,
+          "description": "Additional props passed to the MaterialIcons component."
+        }
+      ],
+      "variants": [
+        {
+          "name": "unchecked",
+          "description": "Gray[50] background, gray[300] border, no icon visible."
+        },
+        {
+          "name": "checked",
+          "description": "Blue[500] background and border, white checkmark icon."
+        },
+        {
+          "name": "disabled",
+          "description": "Opacity 0.6, gray[100] background, interaction blocked."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "blue[500]",
+          "gray[50]",
+          "gray[100]",
+          "gray[300]",
+          "white[500]"
+        ],
+        "sizes": [
+          "24px default size"
+        ],
+        "spacing": [],
+        "radii": [
+          "borderRadius: 4"
+        ],
+        "typography": [],
+        "notes": [
+          "Checked state uses blue[500] by default, overridable via checkedColor."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Uncontrolled checkbox",
+          "description": "Basic checkbox with callback.",
+          "code": "import { CheckBox } from 'fluent-styles';\n\n<CheckBox\n  onCheck={(checked) => console.log('Checked:', checked)}\n/>"
+        },
+        {
+          "title": "Controlled checkbox",
+          "description": "Controlled checkbox with external state.",
+          "code": "import { useState } from 'react';\nimport { CheckBox } from 'fluent-styles';\n\nconst [agreed, setAgreed] = useState(false);\n\n<CheckBox\n  checked={agreed}\n  onCheck={setAgreed}\n/>"
+        },
+        {
+          "title": "Custom color checkbox",
+          "description": "Checkbox with custom brand color.",
+          "code": "import { CheckBox } from 'fluent-styles';\n\n<CheckBox\n  checked={true}\n  checkedColor=\"#7c3aed\"\n  checkMarkColor=\"#fff\"\n  size={28}\n/>"
+        },
+        {
+          "title": "Disabled checkbox",
+          "description": "Checkbox that cannot be interacted with.",
+          "code": "import { CheckBox } from 'fluent-styles';\n\n<CheckBox checked={true} disabled={true} />"
+        }
+      ],
+      "bestPractices": [
+        "Use checked + onCheck for controlled form integration.",
+        "Always provide accessible label via the parent or accessibilityLabel.",
+        "Use checkedColor to match brand primary color when needed."
+      ],
+      "antiPatterns": [
+        "Do not use CheckBox for mutually exclusive options; use RadioButton.",
+        "Do not rely solely on color to communicate state for accessibility."
+      ],
+      "relatedComponents": [
+        "RadioButton",
+        "Switch",
+        "StyledInput"
+      ],
+      "retrievalKeywords": [
+        "checkbox",
+        "check",
+        "boolean",
+        "form",
+        "toggle",
+        "tick",
+        "selection"
+      ],
+      "composesWith": [
+        "XStack",
+        "StyledText",
+        "YStack"
+      ],
+      "generationHints": [
+        "Import CheckBox from 'fluent-styles'.",
+        "Wrap in XStack with StyledText for labeled checkbox rows.",
+        "Use checked + onCheck for controlled form state.",
+        "Default checked color is blue[500]; override with checkedColor."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "checkbox",
+        "form",
+        "boolean",
+        "toggle",
+        "selection"
+      ],
+      "sourceFiles": [
+        "src/package/checkBox/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "CheckBoxProps",
+          "kind": "interface",
+          "signature": "CheckBoxProps extends Omit<TouchableOpacityProps, 'ref'>",
+          "summary": "Props for the CheckBox component."
+        }
+      ],
+      "embeddingText": "CheckBox is a fluent-styles form component for boolean toggle input. Supports controlled and uncontrolled state, customizable colors, size, disabled state. Uses MaterialIcons check icon. Export confirmed in src/index.ts.",
+      "rawContent": "Component CheckBox. Category form. Exported from fluent-styles via src/index.ts. Source: src/package/checkBox/index.tsx. Checkbox with checked, onCheck, checkedColor, size, disabled props. Related: RadioButton, Switch.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. All props extracted directly from CheckBoxProps interface."
+      }
+    },
+    {
+      "id": "navigation-header-overview",
+      "componentName": "StyledHeader",
+      "category": "navigation",
+      "importPath": "fluent-styles",
+      "exportName": "StyledHeader",
+      "docType": "overview",
+      "summary": "Screen header family consisting of StyledHeader (status-bar-aware container), Header (title + back icon row), and Full (passthrough wrapper). Handles iOS/Android status bar height automatically.",
+      "whenToUse": [
+        "Use StyledHeader as the top-level header container to get correct status bar padding.",
+        "Use Header for screens that need a back button, title, and optional right action.",
+        "Use Full when you need a custom header layout inside StyledHeader without the default Header row."
+      ],
+      "whenNotToUse": [
+        "Do not use StyledHeader if you are using a navigation library header (React Navigation) \u2014 they conflict.",
+        "Do not use Header without StyledHeader wrapper if status bar height compensation is needed."
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "defaultValue": null,
+          "description": "StyledHeader: Content rendered below the status bar. Header: Not applicable."
+        },
+        {
+          "name": "statusProps",
+          "type": "StatusBarProps",
+          "required": false,
+          "defaultValue": null,
+          "description": "StyledHeader: Props forwarded to React Native StatusBar. Includes barStyle, backgroundColor, translucent, animated, hidden."
+        },
+        {
+          "name": "skipAndroid",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "StyledHeader: Skip status bar height offset on Android."
+        },
+        {
+          "name": "skipIos",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "true",
+          "description": "StyledHeader: Skip status bar height offset on iOS."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Header: Title text rendered in the header row."
+        },
+        {
+          "name": "icon",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Header: When true, renders a back arrow icon (MaterialIcons arrow-back) before the title."
+        },
+        {
+          "name": "onPress",
+          "type": "() => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Header: Callback for the back icon press."
+        },
+        {
+          "name": "rightIcon",
+          "type": "ReactNode",
+          "required": false,
+          "defaultValue": null,
+          "description": "Header: Optional ReactNode rendered on the right side of the header."
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[800]",
+          "description": "Header: Title text color."
+        },
+        {
+          "name": "fontSize",
+          "type": "number",
+          "required": false,
+          "defaultValue": "theme.fontSize.normal",
+          "description": "Header: Title font size."
+        },
+        {
+          "name": "fontWeight",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.fontWeight.normal",
+          "description": "Header: Title font weight."
+        },
+        {
+          "name": "cycleProps",
+          "type": "any",
+          "required": false,
+          "defaultValue": null,
+          "description": "Header: Props forwarded to the StyledCycle container wrapping the back icon."
+        },
+        {
+          "name": "textProps",
+          "type": "any",
+          "required": false,
+          "defaultValue": null,
+          "description": "Header: Additional props passed to StyledText for the title."
+        }
+      ],
+      "variants": [
+        {
+          "name": "StyledHeader",
+          "description": "Top-level status-bar-aware header container. Wraps children with StatusBar and correct top padding."
+        },
+        {
+          "name": "Header",
+          "description": "Content row with optional back icon, title, and right icon slot."
+        },
+        {
+          "name": "Full",
+          "description": "Passthrough wrapper for fully custom header content inside StyledHeader."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "gray[1]",
+          "gray[700]",
+          "gray[800]"
+        ],
+        "sizes": [
+          "fontSize.normal",
+          "30px icon size"
+        ],
+        "spacing": [
+          "paddingHorizontal: 8",
+          "paddingVertical: 8"
+        ],
+        "radii": [],
+        "typography": [
+          "fontWeight.normal",
+          "fontSize.normal"
+        ],
+        "notes": [
+          "Status bar defaults to dark-content with gray[1] backgroundColor."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Basic header with back button and title",
+          "description": "Screen header with back navigation and title.",
+          "code": "import { StyledHeader, Header } from 'fluent-styles';\n\n<StyledHeader>\n  <Header\n    title=\"My Screen\"\n    icon={true}\n    onPress={() => navigation.goBack()}\n  />\n</StyledHeader>"
+        },
+        {
+          "title": "Header with right action",
+          "description": "Header with back button, title, and a right-side icon.",
+          "code": "import { StyledHeader, Header, StyledIcon } from 'fluent-styles';\n\n<StyledHeader>\n  <Header\n    title=\"Settings\"\n    icon={true}\n    onPress={() => navigation.goBack()}\n    rightIcon={\n      <StyledIcon name=\"settings\" size=\"md\" onPress={() => openSettings()} />\n    }\n  />\n</StyledHeader>"
+        },
+        {
+          "title": "Custom status bar style",
+          "description": "Header with light content status bar for dark backgrounds.",
+          "code": "import { StyledHeader, Header } from 'fluent-styles';\n\n<StyledHeader statusProps={{ barStyle: 'light-content', backgroundColor: '#1e293b' }}>\n  <Header title=\"Dashboard\" />\n</StyledHeader>"
+        }
+      ],
+      "bestPractices": [
+        "Always wrap Header inside StyledHeader to get correct status bar height.",
+        "Use skipAndroid={false} when targeting Android with custom status bar height.",
+        "Provide onPress when icon={true} to handle back navigation."
+      ],
+      "antiPatterns": [
+        "Do not use StyledHeader alongside React Navigation's own header \u2014 disable one.",
+        "Do not pass statusBar height manually; use StyledHeader's skipAndroid/skipIos instead."
+      ],
+      "relatedComponents": [
+        "StyledCycle",
+        "StyledText",
+        "StyledIcon",
+        "XStack"
+      ],
+      "retrievalKeywords": [
+        "header",
+        "navigation",
+        "status bar",
+        "back button",
+        "title bar",
+        "app bar",
+        "toolbar"
+      ],
+      "composesWith": [
+        "StyledIcon",
+        "StyledText",
+        "XStack",
+        "StyledCycle"
+      ],
+      "generationHints": [
+        "Import StyledHeader and Header from 'fluent-styles'.",
+        "Wrap Header inside StyledHeader for proper status bar handling.",
+        "Use icon={true} with onPress for back navigation.",
+        "Use rightIcon prop to add action icons to the right side.",
+        "Use Full inside StyledHeader for fully custom header layouts."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "header",
+        "navigation",
+        "status-bar",
+        "title",
+        "app-bar"
+      ],
+      "sourceFiles": [
+        "src/package/header/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "StyledHeaderProps",
+          "kind": "interface",
+          "signature": "{ children?: ReactNode; statusProps?: StatusBarProps; skipAndroid?: boolean; skipIos?: boolean }",
+          "summary": "Props for the StyledHeader status-bar-aware container."
+        },
+        {
+          "name": "HeaderProps",
+          "kind": "interface",
+          "signature": "HeaderProps",
+          "summary": "Props for the Header content row."
+        }
+      ],
+      "embeddingText": "StyledHeader is a fluent-styles navigation header family. StyledHeader handles status bar height. Header renders title, back icon, and right slot. Full is a passthrough wrapper. Export confirmed in src/index.ts.",
+      "rawContent": "Component StyledHeader/Header/Full. Category navigation. Exported from fluent-styles via src/index.ts. Source: src/package/header/index.tsx. Status-bar-aware header. Header has title, icon (back button), onPress, rightIcon. Related: StyledCycle, StyledText, StyledIcon.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.97,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. StatusBar integration and StyledCycle back-icon usage confirmed."
+      }
+    },
+    {
+      "id": "helper-icon-overview",
+      "componentName": "StyledIcon",
+      "category": "helper",
+      "importPath": "fluent-styles",
+      "exportName": "StyledIcon",
+      "docType": "overview",
+      "summary": "Styled MaterialIcons wrapper with named size variants (xs/sm/md/lg/xl), color theming, and optional press handlers. Wraps react-native-vector-icons/MaterialIcons.",
+      "whenToUse": [
+        "Use StyledIcon wherever a Material Design icon is needed in the UI.",
+        "Use when you need consistent themed icon sizing across the app.",
+        "Use with onPress for icon buttons or touchable icon actions."
+      ],
+      "whenNotToUse": [
+        "Do not use StyledIcon for icon-in-button use cases; prefer PressableIcon.",
+        "Do not use if you need icons from a different icon set (e.g. FontAwesome)."
+      ],
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "defaultValue": "'home'",
+          "description": "MaterialIcons icon name (e.g. 'settings', 'close', 'arrow-back')."
+        },
+        {
+          "name": "size",
+          "type": "'xs' | 'sm' | 'md' | 'lg' | 'xl' | number",
+          "required": false,
+          "defaultValue": "'md'",
+          "description": "Icon size. Named variants map to: xs=16, sm=20, md=24, lg=32, xl=48. Accepts raw number."
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[800]",
+          "description": "Icon color."
+        },
+        {
+          "name": "onPress",
+          "type": "() => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Fired when the icon is tapped."
+        },
+        {
+          "name": "onLongPress",
+          "type": "() => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Fired when the icon is long-pressed."
+        }
+      ],
+      "variants": [
+        {
+          "name": "xs",
+          "description": "16px icon size."
+        },
+        {
+          "name": "sm",
+          "description": "20px icon size."
+        },
+        {
+          "name": "md",
+          "description": "24px icon size (default)."
+        },
+        {
+          "name": "lg",
+          "description": "32px icon size."
+        },
+        {
+          "name": "xl",
+          "description": "48px icon size."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "gray[800]"
+        ],
+        "sizes": [
+          "xs:16 sm:20 md:24 lg:32 xl:48"
+        ],
+        "spacing": [],
+        "radii": [],
+        "typography": [],
+        "notes": [
+          "Default color is theme.colors.gray[800]. Override with color prop."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Basic icon",
+          "description": "Render a home icon at default size.",
+          "code": "import { StyledIcon } from 'fluent-styles';\n\n<StyledIcon name=\"home\" />"
+        },
+        {
+          "title": "Icon with size and color",
+          "description": "Large icon with custom color.",
+          "code": "import { StyledIcon } from 'fluent-styles';\n\n<StyledIcon name=\"settings\" size=\"lg\" color=\"#3b82f6\" />"
+        },
+        {
+          "title": "Pressable icon",
+          "description": "Tappable icon with press handler.",
+          "code": "import { StyledIcon } from 'fluent-styles';\n\n<StyledIcon name=\"close\" size=\"md\" onPress={() => onDismiss()} />"
+        },
+        {
+          "title": "Numeric size",
+          "description": "Icon with exact pixel size.",
+          "code": "import { StyledIcon } from 'fluent-styles';\n\n<StyledIcon name=\"star\" size={36} color=\"#fbbf24\" />"
+        }
+      ],
+      "bestPractices": [
+        "Use named size variants (xs/sm/md/lg/xl) over raw numbers for consistency.",
+        "Wrap StyledIcon in StyledCycle for circular icon containers.",
+        "Use PressableIcon when the icon needs pressable feedback and hit area."
+      ],
+      "antiPatterns": [
+        "Do not use StyledIcon as a standalone button without proper hit area; use PressableIcon.",
+        "Do not use hardcoded colors; use theme tokens or pass color from context."
+      ],
+      "relatedComponents": [
+        "PressableIcon",
+        "StyledCycle",
+        "StyledButton"
+      ],
+      "retrievalKeywords": [
+        "icon",
+        "material icons",
+        "vector icon",
+        "glyph",
+        "symbol"
+      ],
+      "composesWith": [
+        "StyledCycle",
+        "XStack",
+        "PressableIcon",
+        "Header"
+      ],
+      "generationHints": [
+        "Import StyledIcon from 'fluent-styles'.",
+        "Provide name as a MaterialIcons icon name string.",
+        "Use size='lg' or size='xl' for prominent decorative icons.",
+        "Wrap in StyledCycle for circular icon avatar style containers."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "icon",
+        "material-icons",
+        "glyph",
+        "helper"
+      ],
+      "sourceFiles": [
+        "src/package/icon/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "StyledIconProps",
+          "kind": "interface",
+          "signature": "StyledIconProps extends IconComponentProps",
+          "summary": "Props for StyledIcon including name, size, color, and press handlers."
+        },
+        {
+          "name": "IconVariants",
+          "kind": "type",
+          "signature": "{ size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' }",
+          "summary": "Named size variants for StyledIcon."
+        }
+      ],
+      "embeddingText": "StyledIcon wraps react-native-vector-icons MaterialIcons with fluent-styles size variants xs sm md lg xl and theme color defaults. Supports onPress and onLongPress. Export confirmed in src/index.ts.",
+      "rawContent": "Component StyledIcon. Category helper. Exported from fluent-styles via src/index.ts. Source: src/package/icon/index.tsx. MaterialIcons wrapper with size variants. Related: PressableIcon, StyledCycle.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Size variant map and color defaults extracted directly from source."
+      }
+    },
+    {
+      "id": "image-styledimage-overview",
+      "componentName": "StyledImage",
+      "category": "image",
+      "importPath": "fluent-styles",
+      "exportName": "StyledImage",
+      "docType": "overview",
+      "summary": "Image family with automatic error fallback, local/remote source handling, and shape variants (rounded/square/cycle). Includes StyledImageBackground for background image containers.",
+      "whenToUse": [
+        "Use StyledImage for all image rendering with built-in fallback handling.",
+        "Use when you need rounded, circular, or square image shapes via declarative props.",
+        "Use StyledImageBackground when image should serve as a container background.",
+        "Use local={true} when loading a local require() asset."
+      ],
+      "whenNotToUse": [
+        "Do not use StyledImage for icons; use StyledIcon instead.",
+        "Do not use if you need advanced image loading libraries like react-native-fast-image."
+      ],
+      "props": [
+        {
+          "name": "imageUrl",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Remote image URL. Falls back to fallback image on error or if not provided."
+        },
+        {
+          "name": "local",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "When true, treats imageUrl as a local require() asset path."
+        },
+        {
+          "name": "fallback",
+          "type": "any",
+          "required": false,
+          "defaultValue": "require('../../assets/img/blank_1.png')",
+          "description": "Fallback image source shown when imageUrl fails to load or is not provided."
+        },
+        {
+          "name": "rounded",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Applies borderRadius: 8 for rounded corners."
+        },
+        {
+          "name": "square",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Applies borderRadius: 0 for explicit square corners."
+        },
+        {
+          "name": "cycle",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Applies borderRadius: 50 for a circular image shape."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "defaultValue": null,
+          "description": "StyledImageBackground only: Content rendered on top of the background image."
+        }
+      ],
+      "variants": [
+        {
+          "name": "default",
+          "description": "No border radius override (resizeMode: cover)."
+        },
+        {
+          "name": "rounded",
+          "description": "borderRadius: 8."
+        },
+        {
+          "name": "square",
+          "description": "borderRadius: 0 (explicit sharp corners)."
+        },
+        {
+          "name": "cycle",
+          "description": "borderRadius: 50 (circular)."
+        }
+      ],
+      "themeUsage": {
+        "colors": [],
+        "sizes": [],
+        "spacing": [],
+        "radii": [
+          "8 (rounded)",
+          "0 (square)",
+          "50 (cycle)"
+        ],
+        "typography": [],
+        "notes": [
+          "resizeMode defaults to 'cover'. Fallback image is built-in."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Remote image with fallback",
+          "description": "Load remote URL with automatic fallback.",
+          "code": "import { StyledImage } from 'fluent-styles';\n\n<StyledImage\n  imageUrl=\"https://example.com/photo.jpg\"\n  style={{ width: 200, height: 200 }}\n/>"
+        },
+        {
+          "title": "Circular avatar",
+          "description": "Circular user avatar with cycle variant.",
+          "code": "import { StyledImage } from 'fluent-styles';\n\n<StyledImage\n  imageUrl={user.avatarUrl}\n  cycle={true}\n  style={{ width: 56, height: 56 }}\n/>"
+        },
+        {
+          "title": "Rounded card image",
+          "description": "Product image with rounded corners.",
+          "code": "import { StyledImage } from 'fluent-styles';\n\n<StyledImage\n  imageUrl={product.imageUrl}\n  rounded={true}\n  style={{ width: '100%', height: 180 }}\n/>"
+        },
+        {
+          "title": "Background image container",
+          "description": "Full-width hero with content on top.",
+          "code": "import { StyledImageBackground, StyledText } from 'fluent-styles';\n\n<StyledImageBackground\n  imageUrl=\"https://example.com/hero.jpg\"\n  style={{ width: '100%', height: 240 }}\n>\n  <StyledText color=\"#fff\" fontSize={24} fontWeight=\"700\">Welcome</StyledText>\n</StyledImageBackground>"
+        }
+      ],
+      "bestPractices": [
+        "Always provide width and height via style prop; images have no intrinsic size in RN.",
+        "Use cycle={true} for consistent avatar shapes.",
+        "Provide a meaningful fallback for better UX on load failures."
+      ],
+      "antiPatterns": [
+        "Do not use StyledImage without explicit dimensions \u2014 it will render invisible.",
+        "Do not use cycle variant without equal width and height \u2014 shape will be elliptical."
+      ],
+      "relatedComponents": [
+        "StyledCard",
+        "StyledIcon",
+        "YStack"
+      ],
+      "retrievalKeywords": [
+        "image",
+        "photo",
+        "avatar",
+        "thumbnail",
+        "background image",
+        "picture",
+        "circular image"
+      ],
+      "composesWith": [
+        "StyledCard",
+        "YStack",
+        "XStack"
+      ],
+      "generationHints": [
+        "Import StyledImage from 'fluent-styles'.",
+        "Always pass explicit width and height in the style prop.",
+        "Use cycle={true} for avatars.",
+        "Use rounded={true} for card product images.",
+        "Use StyledImageBackground for hero images with overlaid content."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "image",
+        "photo",
+        "avatar",
+        "background",
+        "picture"
+      ],
+      "sourceFiles": [
+        "src/package/image/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "StyledImageProps",
+          "kind": "interface",
+          "signature": "StyledImageProps extends ImageComponentProps",
+          "summary": "Props for StyledImage with imageUrl, local, fallback, and shape variants."
+        },
+        {
+          "name": "StyledImageBackgroundProps",
+          "kind": "interface",
+          "signature": "StyledImageBackgroundProps extends ImageBackgroundComponentProps",
+          "summary": "Props for StyledImageBackground, same as StyledImageProps plus children."
+        },
+        {
+          "name": "ImageVariants",
+          "kind": "type",
+          "signature": "{ rounded?: boolean; square?: boolean; cycle?: boolean }",
+          "summary": "Shape variant props for image components."
+        }
+      ],
+      "embeddingText": "StyledImage is a fluent-styles image component with automatic fallback, remote/local source handling, and shape variants: rounded, square, cycle. StyledImageBackground renders an image as a background container. Export confirmed in src/index.ts.",
+      "rawContent": "Component StyledImage/StyledImageBackground. Category image. Exported from fluent-styles via src/index.ts. Source: src/package/image/index.tsx. Shape variants: rounded (8px), square, cycle (50px). Fallback image included.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Variant logic, fallback logic, and StyledImageBackground confirmed."
+      }
+    },
+    {
+      "id": "helper-keyboardavoidingview-overview",
+      "componentName": "KeyboardAvoidingView",
+      "category": "helper",
+      "importPath": "fluent-styles",
+      "exportName": "KeyboardAvoidingView",
+      "docType": "overview",
+      "summary": "Keyboard avoidance family of four components: KeyboardAvoidingView (base), KeyboardAvoidingForm (form-optimized), KeyboardAvoidingPadding (explicit padding control), KeyboardAwareContent (renderContent helper). Auto-selects iOS/Android behavior.",
+      "whenToUse": [
+        "Use KeyboardAvoidingView as the root container for any screen with text inputs.",
+        "Use KeyboardAvoidingForm when a screen has a group of form fields with a submit button at the bottom.",
+        "Use KeyboardAvoidingPadding when you need fine-grained padding-only control.",
+        "Use KeyboardAwareContent with renderContent for scroll-based content."
+      ],
+      "whenNotToUse": [
+        "Do not wrap the entire app layout in KeyboardAvoidingView \u2014 use it at the screen level.",
+        "Do not use if the screen has no interactive text inputs."
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'light' | 'dark' | 'primary' | 'surface' | 'transparent'",
+          "required": false,
+          "defaultValue": "'surface'",
+          "description": "Background color preset. surface=white, light=gray[50], dark=gray[900], primary=blue[50], transparent."
+        },
+        {
+          "name": "padded",
+          "type": "boolean | 'small' | 'medium' | 'large'",
+          "required": false,
+          "defaultValue": "'medium'",
+          "description": "Padding preset. true=medium(16), small=8, medium=16, large=24."
+        },
+        {
+          "name": "behavior",
+          "type": "'padding' | 'position' | 'height'",
+          "required": false,
+          "defaultValue": "Platform.OS === 'ios' ? 'padding' : 'height'",
+          "description": "RN KeyboardAvoidingView behavior. Auto-set per platform by default."
+        },
+        {
+          "name": "keyOffset",
+          "type": "number",
+          "required": false,
+          "defaultValue": "0",
+          "description": "keyboardVerticalOffset passed to the native KeyboardAvoidingView."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Override background color directly, bypassing variant."
+        },
+        {
+          "name": "flex",
+          "type": "number",
+          "required": false,
+          "defaultValue": "1",
+          "description": "Flex value for the container."
+        },
+        {
+          "name": "justifyContent",
+          "type": "FlexStyle['justifyContent']",
+          "required": false,
+          "defaultValue": "'flex-start'",
+          "description": "Flex justifyContent for the container."
+        },
+        {
+          "name": "alignItems",
+          "type": "FlexStyle['alignItems']",
+          "required": false,
+          "defaultValue": "'stretch'",
+          "description": "Flex alignItems for the container."
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "defaultValue": "'Container'",
+          "description": "Accessibility label for the container."
+        },
+        {
+          "name": "onSubmit",
+          "type": "() => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "KeyboardAvoidingForm only: Called when the last child (submit button) is pressed."
+        },
+        {
+          "name": "spacing",
+          "type": "number",
+          "required": false,
+          "defaultValue": "16",
+          "description": "KeyboardAvoidingForm only: Gap between form fields."
+        },
+        {
+          "name": "renderContent",
+          "type": "() => ReactNode",
+          "required": false,
+          "defaultValue": null,
+          "description": "KeyboardAwareContent only: Render function for scrollable content."
+        }
+      ],
+      "variants": [
+        {
+          "name": "KeyboardAvoidingView",
+          "description": "Base container with variant, padded, behavior, keyOffset, flex, justifyContent, alignItems."
+        },
+        {
+          "name": "KeyboardAvoidingForm",
+          "description": "Form-optimized: splits children into fields + last-child submit button. Adds spacing and onSubmit."
+        },
+        {
+          "name": "KeyboardAvoidingPadding",
+          "description": "Fine-grained explicit paddingTop/Bottom/Left/Right control."
+        },
+        {
+          "name": "KeyboardAwareContent",
+          "description": "Accepts renderContent prop for explicit content render."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "gray[50]",
+          "gray[900]",
+          "blue[50]",
+          "white[500]"
+        ],
+        "sizes": [
+          "small:8",
+          "medium:16",
+          "large:24"
+        ],
+        "spacing": [
+          "padded: small/medium/large padding presets"
+        ],
+        "radii": [],
+        "typography": [],
+        "notes": [
+          "Variant presets map to theme colors. behavior auto-set per platform."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Basic keyboard avoiding screen",
+          "description": "Wrap a screen with inputs to avoid keyboard overlap.",
+          "code": "import { KeyboardAvoidingView } from 'fluent-styles';\n\n<KeyboardAvoidingView variant=\"surface\" padded=\"medium\">\n  <StyledInput label=\"Email\" />\n  <StyledInput label=\"Password\" />\n</KeyboardAvoidingView>"
+        },
+        {
+          "title": "Login form with submit button",
+          "description": "KeyboardAvoidingForm pushes submit to the bottom.",
+          "code": "import { KeyboardAvoidingForm, StyledInput, StyledButton } from 'fluent-styles';\n\n<KeyboardAvoidingForm\n  variant=\"surface\"\n  padded=\"large\"\n  onSubmit={handleLogin}\n>\n  <StyledInput label=\"Email\" />\n  <StyledInput label=\"Password\" />\n  <StyledButton onPress={handleLogin}>Login</StyledButton>\n</KeyboardAvoidingForm>"
+        },
+        {
+          "title": "Transparent overlay keyboard container",
+          "description": "Transparent keyboard avoidance for modal-style screens.",
+          "code": "import { KeyboardAvoidingView } from 'fluent-styles';\n\n<KeyboardAvoidingView variant=\"transparent\" keyOffset={40}>\n  {children}\n</KeyboardAvoidingView>"
+        }
+      ],
+      "bestPractices": [
+        "Use KeyboardAvoidingForm for login, signup, and settings screens with a submit button.",
+        "Set keyOffset on iOS when the screen has custom header heights.",
+        "Prefer variant presets over raw backgroundColor for theme consistency."
+      ],
+      "antiPatterns": [
+        "Do not nest KeyboardAvoidingView inside a ScrollView \u2014 they conflict on Android.",
+        "Do not omit behavior \u2014 always rely on the auto-detect default or set explicitly per platform."
+      ],
+      "relatedComponents": [
+        "StyledInput",
+        "StyledButton",
+        "YStack",
+        "StyledSafeAreaView"
+      ],
+      "retrievalKeywords": [
+        "keyboard",
+        "keyboard avoiding",
+        "keyboard avoiding view",
+        "form",
+        "input",
+        "keyboard overlap",
+        "text input"
+      ],
+      "composesWith": [
+        "StyledInput",
+        "StyledButton",
+        "YStack",
+        "StyledSafeAreaView"
+      ],
+      "generationHints": [
+        "Import KeyboardAvoidingView or KeyboardAvoidingForm from 'fluent-styles'.",
+        "Use KeyboardAvoidingForm for any screen with form fields + submit button.",
+        "The last child of KeyboardAvoidingForm is treated as the submit button.",
+        "Use padded='large' for forms to provide generous touch targets.",
+        "Default behavior is auto-detected for iOS (padding) and Android (height)."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "keyboard",
+        "keyboard-avoiding",
+        "form",
+        "input",
+        "layout"
+      ],
+      "sourceFiles": [
+        "src/package/keyboardAvoidingView/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "KeyboardAvoidingViewProps",
+          "kind": "interface",
+          "signature": "KeyboardAvoidingViewProps extends Omit<RNKeyboardAvoidingViewProps, 'ref'>",
+          "summary": "Props for the base KeyboardAvoidingView."
+        },
+        {
+          "name": "KeyboardAvoidingFormProps",
+          "kind": "interface",
+          "signature": "KeyboardAvoidingFormProps extends KeyboardAvoidingViewProps",
+          "summary": "KeyboardAvoidingForm adds onSubmit and spacing."
+        }
+      ],
+      "embeddingText": "KeyboardAvoidingView is a fluent-styles helper component family for keyboard avoidance. Auto-detects iOS/Android behavior. Includes KeyboardAvoidingForm for form+submit layouts, KeyboardAvoidingPadding for explicit padding, KeyboardAwareContent for renderContent. Export confirmed in src/index.ts.",
+      "rawContent": "Component KeyboardAvoidingView/KeyboardAvoidingForm/KeyboardAvoidingPadding/KeyboardAwareContent. Category helper. Exported from fluent-styles via src/index.ts. Variants: light, dark, primary, surface, transparent. Padded: small/medium/large.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Four member family confirmed. Platform-specific behavior auto-detect confirmed."
+      }
+    },
+    {
+      "id": "form-radiobutton-overview",
+      "componentName": "RadioButton",
+      "category": "form",
+      "importPath": "fluent-styles",
+      "exportName": "RadioButton",
+      "docType": "overview",
+      "summary": "Circular radio button input for single-select groups. Uses name/selected pattern for group membership. Customizable colors, size, and indicator icon. RadioGroupProps type supports group management.",
+      "whenToUse": [
+        "Use RadioButton for mutually exclusive single-select form options.",
+        "Use when users must pick exactly one option from a fixed set.",
+        "Use for preference settings, payment methods, or plan selection."
+      ],
+      "whenNotToUse": [
+        "Do not use RadioButton for independent toggles; use CheckBox instead.",
+        "Do not use when more than 5-6 options exist; consider a Dropdown."
+      ],
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "defaultValue": null,
+          "description": "Unique identifier for this radio button within a group."
+        },
+        {
+          "name": "selected",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "The currently selected radio button name in the group. RadioButton is selected when selected === name."
+        },
+        {
+          "name": "onSelect",
+          "type": "(name: string) => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Callback fired with the name of this button when pressed."
+        },
+        {
+          "name": "selectedColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.blue[500]",
+          "description": "Background and border color when selected."
+        },
+        {
+          "name": "unselectedColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[50]",
+          "description": "Background color when unselected."
+        },
+        {
+          "name": "borderColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[300]",
+          "description": "Border color override."
+        },
+        {
+          "name": "indicatorColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.white[500]",
+          "description": "Color of the inner indicator dot."
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "required": false,
+          "defaultValue": "24",
+          "description": "Width and height of the radio button in pixels."
+        },
+        {
+          "name": "indicatorSize",
+          "type": "number",
+          "required": false,
+          "defaultValue": "10",
+          "description": "Size of the inner indicator icon."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Disables interaction and reduces opacity."
+        },
+        {
+          "name": "iconName",
+          "type": "string",
+          "required": false,
+          "defaultValue": "'circle'",
+          "description": "MaterialIcons icon name used as the selection indicator."
+        }
+      ],
+      "variants": [
+        {
+          "name": "unselected",
+          "description": "Gray[50] background, gray[300] border, no indicator."
+        },
+        {
+          "name": "selected",
+          "description": "Blue[500] background and border, white circle indicator."
+        },
+        {
+          "name": "disabled",
+          "description": "Opacity 0.6, gray[100] background, interaction blocked."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "blue[500]",
+          "gray[50]",
+          "gray[100]",
+          "gray[300]",
+          "white[500]"
+        ],
+        "sizes": [
+          "24px default"
+        ],
+        "spacing": [],
+        "radii": [
+          "borderRadius: 100 (full circle)"
+        ],
+        "typography": [],
+        "notes": [
+          "Selected state uses blue[500] by default; override with selectedColor."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Radio group with state",
+          "description": "Basic radio button group with external state.",
+          "code": "import { useState } from 'react';\nimport { RadioButton, XStack, StyledText } from 'fluent-styles';\n\nconst [plan, setPlan] = useState('monthly');\n\n<XStack gap={16}>\n  <XStack alignItems=\"center\" gap={8}>\n    <RadioButton name=\"monthly\" selected={plan} onSelect={setPlan} />\n    <StyledText>Monthly</StyledText>\n  </XStack>\n  <XStack alignItems=\"center\" gap={8}>\n    <RadioButton name=\"annual\" selected={plan} onSelect={setPlan} />\n    <StyledText>Annual</StyledText>\n  </XStack>\n</XStack>"
+        },
+        {
+          "title": "Custom color radio button",
+          "description": "Radio button with brand color.",
+          "code": "import { RadioButton } from 'fluent-styles';\n\n<RadioButton\n  name=\"premium\"\n  selected={selectedPlan}\n  onSelect={setSelectedPlan}\n  selectedColor=\"#7c3aed\"\n/>"
+        }
+      ],
+      "bestPractices": [
+        "Always manage selected state at the group level, not per RadioButton.",
+        "Wrap RadioButton + StyledText in XStack for accessible labeled radio rows.",
+        "Use the RadioGroupProps type to type your group state handler."
+      ],
+      "antiPatterns": [
+        "Do not use RadioButton for independent toggles; use CheckBox.",
+        "Do not allow more than ~6 radio options; use Dropdown for long lists."
+      ],
+      "relatedComponents": [
+        "CheckBox",
+        "Dropdown",
+        "StyledInput"
+      ],
+      "retrievalKeywords": [
+        "radio button",
+        "single select",
+        "mutually exclusive",
+        "option",
+        "choice",
+        "form",
+        "selection"
+      ],
+      "composesWith": [
+        "XStack",
+        "StyledText",
+        "YStack"
+      ],
+      "generationHints": [
+        "Import RadioButton from 'fluent-styles'.",
+        "Manage selected state at group level; pass shared selected value to each RadioButton.",
+        "Each RadioButton needs a unique name prop.",
+        "Wrap RadioButton + label in XStack with gap={8} for inline labeled options.",
+        "Use YStack to stack radio options vertically."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "radio",
+        "radio-button",
+        "single-select",
+        "form",
+        "option"
+      ],
+      "sourceFiles": [
+        "src/package/radioButton/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "RadioButtonProps",
+          "kind": "interface",
+          "signature": "RadioButtonProps extends Omit<TouchableOpacityProps, 'ref'>",
+          "summary": "Props for RadioButton including name, selected, onSelect, colors, and size."
+        },
+        {
+          "name": "RadioGroupProps",
+          "kind": "interface",
+          "signature": "{ name: string; value?: string; onValueChange?: (value: string) => void; disabled?: boolean; children?: ReactNode }",
+          "summary": "Props type for managing a RadioButton group."
+        }
+      ],
+      "embeddingText": "RadioButton is a fluent-styles form component for single-select groups. Uses name/selected pattern. Blue[500] selected color. Customizable colors and size. Has RadioGroupProps type for group management. Export confirmed in src/index.ts.",
+      "rawContent": "Component RadioButton. Category form. Exported from fluent-styles via src/index.ts. Source: src/package/radioButton/index.tsx. name/selected/onSelect pattern. Related: CheckBox, Dropdown.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. name/selected selection pattern confirmed."
+      }
+    },
+    {
+      "id": "form-switch-overview",
+      "componentName": "Switch",
+      "category": "form",
+      "importPath": "fluent-styles",
+      "exportName": "Switch",
+      "docType": "overview",
+      "summary": "Toggle switch family: Switch (bare toggle), SwitchRow (labeled toggle with description), GroupedSwitch (bordered list of labeled switches). Supports size, variant, and controlled/uncontrolled state.",
+      "whenToUse": [
+        "Use Switch for immediate on/off toggles (notifications, settings flags).",
+        "Use SwitchRow when each toggle needs a label and optional description.",
+        "Use GroupedSwitch for settings screens with multiple labeled toggles in a bordered group.",
+        "Use when the toggle effect is immediate (no submit needed)."
+      ],
+      "whenNotToUse": [
+        "Do not use Switch for multi-select options; use CheckBox.",
+        "Do not use when the toggle requires confirmation before applying; use a Dialog."
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Current toggle state."
+        },
+        {
+          "name": "onValueChange",
+          "type": "(value: boolean) => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "Callback fired with the new boolean state when toggled."
+        },
+        {
+          "name": "size",
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "defaultValue": "'medium'",
+          "description": "Scale of the switch. small=1.1x, medium=1.5x, large=2x native scale."
+        },
+        {
+          "name": "variant",
+          "type": "'default' | 'primary' | 'success' | 'warning' | 'danger'",
+          "required": false,
+          "defaultValue": "'primary'",
+          "description": "Color variant for the on-state track and thumb. primary=blue[400/600], success=green, warning=amber, danger=red."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Disables interaction and reduces opacity to 0.5."
+        },
+        {
+          "name": "trackColorOff",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[200]",
+          "description": "Track color in off state."
+        },
+        {
+          "name": "trackColorOn",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Track color in on state. Defaults to variant track color."
+        },
+        {
+          "name": "thumbColorOff",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[300]",
+          "description": "Thumb color in off state."
+        },
+        {
+          "name": "thumbColorOn",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Thumb color in on state. Defaults to variant thumb color."
+        },
+        {
+          "name": "iosBackgroundColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[200]",
+          "description": "iOS-specific background color."
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "SwitchRow only: Label text rendered to the left of the toggle."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "SwitchRow only: Secondary description text below the label."
+        },
+        {
+          "name": "switches",
+          "type": "Array<{ id: string; label: string; description?: string; value: boolean }>",
+          "required": false,
+          "defaultValue": null,
+          "description": "GroupedSwitch only: Array of switch configuration objects."
+        },
+        {
+          "name": "onChange",
+          "type": "(id: string, value: boolean) => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "GroupedSwitch only: Callback fired with the changed switch id and new value."
+        }
+      ],
+      "variants": [
+        {
+          "name": "default",
+          "description": "Gray track on, gray thumb."
+        },
+        {
+          "name": "primary",
+          "description": "Blue[400] track on, blue[600] thumb (default)."
+        },
+        {
+          "name": "success",
+          "description": "Green[400] track on, green[600] thumb."
+        },
+        {
+          "name": "warning",
+          "description": "Amber[400] track on, amber[600] thumb."
+        },
+        {
+          "name": "danger",
+          "description": "Red[400] track on, red[600] thumb."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "blue[400]",
+          "blue[600]",
+          "green[400]",
+          "green[600]",
+          "amber[400]",
+          "amber[600]",
+          "red[400]",
+          "red[600]",
+          "gray[200]",
+          "gray[300]"
+        ],
+        "sizes": [
+          "small:1.1x",
+          "medium:1.5x",
+          "large:2x scale"
+        ],
+        "spacing": [
+          "SwitchRow: padding 12, marginVertical 4"
+        ],
+        "radii": [
+          "SwitchRow: borderRadius 8"
+        ],
+        "typography": [
+          "SwitchRow label: fontSize 16, fontWeight 600",
+          "description: fontSize 14"
+        ],
+        "notes": [
+          "Switch scales native RN Switch. Variant maps directly to theme color tokens."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Basic switch",
+          "description": "Simple on/off toggle.",
+          "code": "import { useState } from 'react';\nimport { Switch } from 'fluent-styles';\n\nconst [enabled, setEnabled] = useState(false);\n\n<Switch value={enabled} onValueChange={setEnabled} />"
+        },
+        {
+          "title": "SwitchRow with label and description",
+          "description": "Labeled switch with secondary description.",
+          "code": "import { SwitchRow } from 'fluent-styles';\n\n<SwitchRow\n  label=\"Push Notifications\"\n  description=\"Receive alerts for new messages\"\n  value={notificationsEnabled}\n  onValueChange={setNotificationsEnabled}\n/>"
+        },
+        {
+          "title": "GroupedSwitch settings panel",
+          "description": "Multiple toggles in a bordered group.",
+          "code": "import { GroupedSwitch } from 'fluent-styles';\n\n<GroupedSwitch\n  switches={[\n    { id: 'notifications', label: 'Notifications', value: true },\n    { id: 'darkMode', label: 'Dark Mode', description: 'Use dark theme', value: false },\n    { id: 'autoUpdate', label: 'Auto Update', value: true },\n  ]}\n  onChange={(id, value) => handleSettingChange(id, value)}\n/>"
+        },
+        {
+          "title": "Danger variant switch",
+          "description": "Switch with red variant for destructive setting.",
+          "code": "import { SwitchRow } from 'fluent-styles';\n\n<SwitchRow\n  label=\"Delete Account\"\n  value={deleteEnabled}\n  onValueChange={setDeleteEnabled}\n  variant=\"danger\"\n/>"
+        }
+      ],
+      "bestPractices": [
+        "Use SwitchRow for all labeled toggles to ensure consistent spacing.",
+        "Use GroupedSwitch for settings sections with 2+ related toggles.",
+        "Always use variant to communicate semantic intent (success for enable, danger for destructive)."
+      ],
+      "antiPatterns": [
+        "Do not use Switch for form options that need explicit submission; use CheckBox.",
+        "Do not use multiple bare Switch components in a vertical list; use GroupedSwitch."
+      ],
+      "relatedComponents": [
+        "CheckBox",
+        "GroupedSwitch",
+        "SwitchRow"
+      ],
+      "retrievalKeywords": [
+        "switch",
+        "toggle",
+        "settings",
+        "on off",
+        "boolean toggle",
+        "enable disable"
+      ],
+      "composesWith": [
+        "YStack",
+        "XStack",
+        "StyledText"
+      ],
+      "generationHints": [
+        "Import Switch, SwitchRow, or GroupedSwitch from 'fluent-styles'.",
+        "Use SwitchRow for any switch that needs a label.",
+        "Use GroupedSwitch for a settings section with multiple toggles.",
+        "Default variant is 'primary' (blue); change to 'success' or 'danger' as needed.",
+        "GroupedSwitch wraps switches in a bordered group automatically."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "switch",
+        "toggle",
+        "settings",
+        "on-off",
+        "form"
+      ],
+      "sourceFiles": [
+        "src/package/switch/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "SwitchProps",
+          "kind": "interface",
+          "signature": "SwitchProps extends Omit<RNSwitchProps, 'ref'>",
+          "summary": "Props for the bare Switch component."
+        },
+        {
+          "name": "SwitchRowProps",
+          "kind": "interface",
+          "signature": "SwitchRowProps extends SwitchProps",
+          "summary": "SwitchRow adds label, description, labelColor, descriptionColor."
+        },
+        {
+          "name": "GroupedSwitchProps",
+          "kind": "interface",
+          "signature": "GroupedSwitchProps",
+          "summary": "GroupedSwitch takes a switches array and onChange handler."
+        }
+      ],
+      "embeddingText": "Switch is a fluent-styles form toggle family. Switch is bare toggle. SwitchRow adds label and description. GroupedSwitch renders a bordered settings group. Variants: default, primary, success, warning, danger. Sizes: small, medium, large. Export confirmed in src/index.ts.",
+      "rawContent": "Component Switch/SwitchRow/GroupedSwitch. Category form. Exported from fluent-styles via src/index.ts. Source: src/package/switch/index.tsx. Color variants and size scale confirmed.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Three-member family, variant config, and size scale confirmed."
+      }
+    },
+    {
+      "id": "helper-cycle-overview",
+      "componentName": "StyledCycle",
+      "category": "helper",
+      "importPath": "fluent-styles",
+      "exportName": "StyledCycle",
+      "docType": "overview",
+      "summary": "Circular container component for wrapping icons, avatars, or badges. Provides four named size variants (sm/md/lg/xl) with gray border and background by default. Used internally by Header for back-button containers.",
+      "whenToUse": [
+        "Use StyledCycle to wrap StyledIcon components in a circular container.",
+        "Use for avatar containers, icon badges, or any circular UI element.",
+        "Use when you need consistent circular sizing across the app."
+      ],
+      "whenNotToUse": [
+        "Do not use StyledCycle for rectangular or rounded containers; use StyledCard or YStack with borderRadius.",
+        "Do not use StyledCycle for images; use StyledImage with cycle={true} instead."
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'sm' | 'md' | 'lg' | 'xl'",
+          "required": false,
+          "defaultValue": "'md' (48x48)",
+          "description": "Named size variant. sm=32x32, md=48x48, lg=64x64, xl=80x80."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "defaultValue": null,
+          "description": "Content centered inside the circle."
+        }
+      ],
+      "variants": [
+        {
+          "name": "sm",
+          "description": "32x32 circular container."
+        },
+        {
+          "name": "md",
+          "description": "48x48 circular container (default)."
+        },
+        {
+          "name": "lg",
+          "description": "64x64 circular container."
+        },
+        {
+          "name": "xl",
+          "description": "80x80 circular container."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "gray[200] (border)",
+          "gray[50] (background)"
+        ],
+        "sizes": [
+          "sm:32 md:48 lg:64 xl:80"
+        ],
+        "spacing": [],
+        "radii": [
+          "borderRadius: 50"
+        ],
+        "typography": [],
+        "notes": [
+          "Default background is gray[50] with gray[200] border. Override via style or backgroundColor prop."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Icon in circle",
+          "description": "Circular icon container for navigation or action.",
+          "code": "import { StyledCycle, StyledIcon } from 'fluent-styles';\n\n<StyledCycle size=\"md\">\n  <StyledIcon name=\"arrow-back\" size=\"md\" />\n</StyledCycle>"
+        },
+        {
+          "title": "Large avatar placeholder",
+          "description": "XL cycle for user avatar display.",
+          "code": "import { StyledCycle, StyledIcon } from 'fluent-styles';\n\n<StyledCycle size=\"xl\" backgroundColor=\"#e0e7ff\">\n  <StyledIcon name=\"person\" size=\"xl\" color=\"#4f46e5\" />\n</StyledCycle>"
+        },
+        {
+          "title": "Custom colored cycle",
+          "description": "Cycle with brand background.",
+          "code": "import { StyledCycle, StyledIcon } from 'fluent-styles';\n\n<StyledCycle size=\"lg\" backgroundColor=\"#3b82f61a\" borderColor=\"#3b82f6\">\n  <StyledIcon name=\"star\" size=\"lg\" color=\"#3b82f6\" />\n</StyledCycle>"
+        }
+      ],
+      "bestPractices": [
+        "Use size variant instead of raw width/height for consistent circular containers.",
+        "Pair with StyledIcon for icon containers.",
+        "Override backgroundColor and borderColor via style props for custom brand colors."
+      ],
+      "antiPatterns": [
+        "Do not use for non-circular containers; use YStack with borderRadius instead.",
+        "Do not put multiple children inside StyledCycle; it centers a single child."
+      ],
+      "relatedComponents": [
+        "StyledIcon",
+        "StyledImage",
+        "Header"
+      ],
+      "retrievalKeywords": [
+        "cycle",
+        "circle",
+        "circular container",
+        "icon container",
+        "avatar container",
+        "round"
+      ],
+      "composesWith": [
+        "StyledIcon",
+        "StyledImage",
+        "Header"
+      ],
+      "generationHints": [
+        "Import StyledCycle from 'fluent-styles'.",
+        "Pair with StyledIcon for circular icon buttons.",
+        "Use size='xl' for user avatar placeholders.",
+        "Override backgroundColor for brand-colored circles."
+      ],
+      "usagePriority": "medium",
+      "status": "verified",
+      "tags": [
+        "cycle",
+        "circle",
+        "icon-container",
+        "avatar",
+        "helper"
+      ],
+      "sourceFiles": [
+        "src/package/cycle/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "StyledCycleProps",
+          "kind": "interface",
+          "signature": "StyledCycleProps extends CycleComponentProps",
+          "summary": "Props for StyledCycle including size variant and children."
+        },
+        {
+          "name": "CycleVariants",
+          "kind": "type",
+          "signature": "{ size?: 'sm' | 'md' | 'lg' | 'xl' }",
+          "summary": "Named size variants for StyledCycle."
+        }
+      ],
+      "embeddingText": "StyledCycle is a fluent-styles circular container. Size variants sm(32) md(48) lg(64) xl(80). Gray border and background defaults. Used internally by Header. Export confirmed in src/index.ts.",
+      "rawContent": "Component StyledCycle/CycleBase. Category helper. Exported from fluent-styles via src/index.ts. Source: src/package/cycle/index.tsx. Circular container with size variants. Related: StyledIcon, Header.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Size map and defaults confirmed."
+      }
+    },
+    {
+      "id": "helper-separator-overview",
+      "componentName": "Separator",
+      "category": "helper",
+      "importPath": "fluent-styles",
+      "exportName": "Separator",
+      "docType": "overview",
+      "summary": "Visual divider family: Separator (line divider), SeparatorWithLabel (divider with centered text), SeparatorGroup (repeated dividers), DottedSeparator (dotted line). Supports horizontal/vertical orientation and four color variants.",
+      "whenToUse": [
+        "Use Separator to visually divide sections or list items.",
+        "Use SeparatorWithLabel for 'OR' dividers in login/signup forms.",
+        "Use SeparatorGroup for decorative repeated divider patterns.",
+        "Use DottedSeparator for decorative or draft-style section breaks."
+      ],
+      "whenNotToUse": [
+        "Do not use Separator as a spacer; use StyledSpacer for spacing.",
+        "Do not use a full-width Separator inside a card if the card already has dividers."
+      ],
+      "props": [
+        {
+          "name": "orientation",
+          "type": "'horizontal' | 'vertical'",
+          "required": false,
+          "defaultValue": "'horizontal'",
+          "description": "Direction of the separator line."
+        },
+        {
+          "name": "variant",
+          "type": "'default' | 'muted' | 'primary' | 'subtle'",
+          "required": false,
+          "defaultValue": "'default'",
+          "description": "Color variant. default=gray[300], muted=gray[200], primary=blue[300], subtle=gray[100]."
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Override separator color directly."
+        },
+        {
+          "name": "thickness",
+          "type": "number",
+          "required": false,
+          "defaultValue": "1",
+          "description": "Line thickness in pixels."
+        },
+        {
+          "name": "width",
+          "type": "DimensionValue",
+          "required": false,
+          "defaultValue": "'100%'",
+          "description": "Width (horizontal separators). Defaults to full width."
+        },
+        {
+          "name": "height",
+          "type": "DimensionValue",
+          "required": false,
+          "defaultValue": "'100%'",
+          "description": "Height (vertical separators). Defaults to full height."
+        },
+        {
+          "name": "flex",
+          "type": "number",
+          "required": false,
+          "defaultValue": null,
+          "description": "Flex value for use inside flex containers (e.g. flex={1} in SeparatorWithLabel)."
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "SeparatorWithLabel only: Text centered between the two separator lines."
+        },
+        {
+          "name": "labelColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[600]",
+          "description": "SeparatorWithLabel only: Label text color."
+        },
+        {
+          "name": "labelSize",
+          "type": "number",
+          "required": false,
+          "defaultValue": "14",
+          "description": "SeparatorWithLabel only: Label font size."
+        },
+        {
+          "name": "count",
+          "type": "number",
+          "required": false,
+          "defaultValue": "3",
+          "description": "SeparatorGroup only: Number of separator lines to render."
+        },
+        {
+          "name": "spacing",
+          "type": "number",
+          "required": false,
+          "defaultValue": "8",
+          "description": "SeparatorGroup only: Gap between separator lines."
+        }
+      ],
+      "variants": [
+        {
+          "name": "default",
+          "description": "gray[300] color."
+        },
+        {
+          "name": "muted",
+          "description": "gray[200] color (lighter than default)."
+        },
+        {
+          "name": "primary",
+          "description": "blue[300] color."
+        },
+        {
+          "name": "subtle",
+          "description": "gray[100] color (very faint)."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "gray[100]",
+          "gray[200]",
+          "gray[300]",
+          "blue[300]",
+          "gray[600]"
+        ],
+        "sizes": [
+          "thickness: 1px default"
+        ],
+        "spacing": [
+          "SeparatorWithLabel: gap 12, margin 12"
+        ],
+        "radii": [],
+        "typography": [
+          "SeparatorWithLabel label: fontSize 14"
+        ],
+        "notes": [
+          "variantConfig maps variants to theme color tokens."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Basic horizontal separator",
+          "description": "Full-width line divider between sections.",
+          "code": "import { Separator } from 'fluent-styles';\n\n<Separator />"
+        },
+        {
+          "title": "OR separator for login form",
+          "description": "Text divider between email and social login options.",
+          "code": "import { SeparatorWithLabel } from 'fluent-styles';\n\n<SeparatorWithLabel label=\"OR\" variant=\"muted\" />"
+        },
+        {
+          "title": "Vertical separator",
+          "description": "Vertical divider between two columns.",
+          "code": "import { Separator, XStack } from 'fluent-styles';\n\n<XStack height={40} alignItems=\"center\">\n  <Separator orientation=\"vertical\" />\n</XStack>"
+        },
+        {
+          "title": "Primary colored separator",
+          "description": "Blue separator to highlight a section break.",
+          "code": "import { Separator } from 'fluent-styles';\n\n<Separator variant=\"primary\" thickness={2} />"
+        }
+      ],
+      "bestPractices": [
+        "Use variant='muted' for subtle list item dividers.",
+        "Use SeparatorWithLabel for auth screen 'OR' dividers.",
+        "Use flex={1} on Separator inside XStack for auto-expanding lines."
+      ],
+      "antiPatterns": [
+        "Do not use Separator as vertical spacing; use StyledSpacer.",
+        "Do not set thickness > 2 for standard dividers \u2014 it becomes too heavy visually."
+      ],
+      "relatedComponents": [
+        "StyledSpacer",
+        "XStack",
+        "YStack"
+      ],
+      "retrievalKeywords": [
+        "separator",
+        "divider",
+        "hr",
+        "line",
+        "rule",
+        "or divider",
+        "section break"
+      ],
+      "composesWith": [
+        "XStack",
+        "YStack",
+        "StyledText"
+      ],
+      "generationHints": [
+        "Import Separator from 'fluent-styles'.",
+        "Use <Separator /> for simple full-width horizontal dividers.",
+        "Use <SeparatorWithLabel label='OR' /> for auth form dividers.",
+        "Use variant='muted' inside lists for soft dividers.",
+        "Use variant='primary' for highlighted section breaks."
+      ],
+      "usagePriority": "medium",
+      "status": "verified",
+      "tags": [
+        "separator",
+        "divider",
+        "line",
+        "horizontal",
+        "vertical",
+        "or"
+      ],
+      "sourceFiles": [
+        "src/package/separator/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "SeparatorProps",
+          "kind": "interface",
+          "signature": "SeparatorProps extends ViewProps, ViewStyle",
+          "summary": "Props for Separator including orientation, variant, thickness, color."
+        },
+        {
+          "name": "SeparatorWithLabelProps",
+          "kind": "interface",
+          "signature": "SeparatorWithLabelProps extends SeparatorProps",
+          "summary": "Adds label, labelColor, labelSize, leftContent, rightContent, gap."
+        },
+        {
+          "name": "SeparatorGroupProps",
+          "kind": "interface",
+          "signature": "SeparatorGroupProps",
+          "summary": "Props for rendering count repeated separators with spacing."
+        }
+      ],
+      "embeddingText": "Separator is a fluent-styles visual divider family. Supports horizontal and vertical orientation. Variants: default(gray[300]), muted(gray[200]), primary(blue[300]), subtle(gray[100]). SeparatorWithLabel for OR dividers. DottedSeparator for dotted lines. Export confirmed in src/index.ts.",
+      "rawContent": "Component Separator/SeparatorWithLabel/SeparatorGroup/DottedSeparator. Category helper. Exported from fluent-styles via src/index.ts. Source: src/package/separator/index.tsx.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Four-member family, variant config, and orientation confirmed."
+      }
+    },
+    {
+      "id": "feedback-spinner-overview",
+      "componentName": "Spinner",
+      "category": "feedback",
+      "importPath": "fluent-styles",
+      "exportName": "Spinner",
+      "docType": "overview",
+      "summary": "Loading indicator family: Spinner (activity indicator), SpinnerContainer (full-screen modal overlay), InlineSpinner (compact horizontal/vertical spinner with text). Five color variants and three sizes.",
+      "whenToUse": [
+        "Use Spinner for inline loading states within a UI region.",
+        "Use SpinnerContainer for full-screen loading overlays (blocking operations).",
+        "Use InlineSpinner for compact spinner+text combos inside buttons or list items.",
+        "Use overlay={true} on Spinner for a semi-transparent overlay without the SpinnerContainer modal."
+      ],
+      "whenNotToUse": [
+        "Do not use SpinnerContainer if the operation is non-blocking; use Spinner.",
+        "Do not use Spinner without visual context; always pair with a label or message for accessibility."
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'small' | 'medium' | 'large' | number",
+          "required": false,
+          "defaultValue": "'medium'",
+          "description": "Spinner size. Named: small=30, medium=50, large=80. Accepts raw number."
+        },
+        {
+          "name": "variant",
+          "type": "'default' | 'primary' | 'success' | 'warning' | 'danger'",
+          "required": false,
+          "defaultValue": "'primary'",
+          "description": "Color variant. primary=blue[500], success=green[500], warning=amber[500], danger=red[500], default=gray[400]."
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Override spinner color directly."
+        },
+        {
+          "name": "overlay",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "false",
+          "description": "Spinner only: When true, renders as a position:absolute semi-transparent overlay."
+        },
+        {
+          "name": "overlayColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "'rgba(0, 0, 0, 0.3)'",
+          "description": "Background color of the overlay."
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "Spinner only: Text displayed below the spinner."
+        },
+        {
+          "name": "labelColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "theme.colors.gray[600]",
+          "description": "Color of the label text (white[500] when overlay=true)."
+        },
+        {
+          "name": "labelSize",
+          "type": "number",
+          "required": false,
+          "defaultValue": "14",
+          "description": "Font size of the label."
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "defaultValue": "'Loading'",
+          "description": "Accessibility label for screen readers."
+        },
+        {
+          "name": "isVisible",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": "true",
+          "description": "SpinnerContainer only: When false, renders nothing."
+        },
+        {
+          "name": "backdropColor",
+          "type": "string",
+          "required": false,
+          "defaultValue": "'rgba(0, 0, 0, 0.5)'",
+          "description": "SpinnerContainer only: Background color of the full-screen backdrop."
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "SpinnerContainer only: Message text shown below the spinner."
+        },
+        {
+          "name": "onBackdropPress",
+          "type": "() => void",
+          "required": false,
+          "defaultValue": null,
+          "description": "SpinnerContainer only: Called when the backdrop is pressed (dismissible overlay)."
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "required": false,
+          "defaultValue": null,
+          "description": "InlineSpinner only: Text displayed next to the spinner."
+        },
+        {
+          "name": "direction",
+          "type": "'row' | 'column'",
+          "required": false,
+          "defaultValue": "'row'",
+          "description": "InlineSpinner only: Layout direction for spinner + text."
+        },
+        {
+          "name": "gap",
+          "type": "number",
+          "required": false,
+          "defaultValue": "8",
+          "description": "InlineSpinner only: Gap between spinner and text."
+        }
+      ],
+      "variants": [
+        {
+          "name": "default",
+          "description": "gray[400] spinner color."
+        },
+        {
+          "name": "primary",
+          "description": "blue[500] spinner color (default)."
+        },
+        {
+          "name": "success",
+          "description": "green[500] spinner color."
+        },
+        {
+          "name": "warning",
+          "description": "amber[500] spinner color."
+        },
+        {
+          "name": "danger",
+          "description": "red[500] spinner color."
+        }
+      ],
+      "themeUsage": {
+        "colors": [
+          "blue[500]",
+          "green[500]",
+          "amber[500]",
+          "red[500]",
+          "gray[400]",
+          "gray[600]",
+          "white[500]"
+        ],
+        "sizes": [
+          "small:30 medium:50 large:80"
+        ],
+        "spacing": [
+          "InlineSpinner gap: 8"
+        ],
+        "radii": [],
+        "typography": [
+          "label fontSize: 14"
+        ],
+        "notes": [
+          "SpinnerContainer has darker backdrop (0.5 alpha) vs Spinner overlay (0.3 alpha)."
+        ]
+      },
+      "examples": [
+        {
+          "title": "Inline loading spinner",
+          "description": "Simple centered spinner.",
+          "code": "import { Spinner } from 'fluent-styles';\n\n<Spinner size=\"medium\" variant=\"primary\" />"
+        },
+        {
+          "title": "Spinner with label",
+          "description": "Spinner with loading text.",
+          "code": "import { Spinner } from 'fluent-styles';\n\n<Spinner\n  size=\"large\"\n  variant=\"primary\"\n  label=\"Loading data...\"\n/>"
+        },
+        {
+          "title": "Full screen loading overlay",
+          "description": "Blocking modal spinner with message.",
+          "code": "import { SpinnerContainer } from 'fluent-styles';\n\n<SpinnerContainer\n  isVisible={isLoading}\n  message=\"Processing your request...\"\n  variant=\"primary\"\n  size=\"large\"\n/>"
+        },
+        {
+          "title": "Inline spinner in button",
+          "description": "Compact spinner with text for loading states in compact UI.",
+          "code": "import { InlineSpinner } from 'fluent-styles';\n\n<InlineSpinner size=\"small\" text=\"Saving...\" variant=\"primary\" />"
+        },
+        {
+          "title": "Dismissible spinner overlay",
+          "description": "Overlay spinner that can be dismissed.",
+          "code": "import { SpinnerContainer } from 'fluent-styles';\n\n<SpinnerContainer\n  isVisible={isLoading}\n  message=\"Uploading...\"\n  onBackdropPress={() => cancelUpload()}\n/>"
+        }
+      ],
+      "bestPractices": [
+        "Use SpinnerContainer for blocking operations that prevent user interaction.",
+        "Always set isVisible to hide SpinnerContainer when loading is done.",
+        "Use label or message for all spinners to improve accessibility.",
+        "Use InlineSpinner with direction='row' for button loading states."
+      ],
+      "antiPatterns": [
+        "Do not use SpinnerContainer for non-blocking operations; use Spinner.",
+        "Do not omit label/message \u2014 provide context for screen readers and users."
+      ],
+      "relatedComponents": [
+        "StyledButton",
+        "YStack",
+        "StyledDialog"
+      ],
+      "retrievalKeywords": [
+        "spinner",
+        "loading",
+        "activity indicator",
+        "progress",
+        "overlay",
+        "loading spinner",
+        "busy"
+      ],
+      "composesWith": [
+        "YStack",
+        "XStack",
+        "StyledButton"
+      ],
+      "generationHints": [
+        "Import Spinner, SpinnerContainer, or InlineSpinner from 'fluent-styles'.",
+        "Use SpinnerContainer for full-screen loading overlays controlled by isVisible.",
+        "Use Spinner with overlay={true} for in-screen partial overlays.",
+        "Use InlineSpinner for compact loading states inline with other UI.",
+        "Default variant is 'primary' (blue); use 'success' after completion feedback."
+      ],
+      "usagePriority": "high",
+      "status": "verified",
+      "tags": [
+        "spinner",
+        "loading",
+        "activity-indicator",
+        "overlay",
+        "feedback"
+      ],
+      "sourceFiles": [
+        "src/package/spinner/index.tsx",
+        "src/index.ts"
+      ],
+      "typeDefinitions": [
+        {
+          "name": "SpinnerProps",
+          "kind": "interface",
+          "signature": "SpinnerProps extends Omit<ActivityIndicatorProps, 'ref' | 'size'>",
+          "summary": "Props for the base Spinner."
+        },
+        {
+          "name": "SpinnerContainerProps",
+          "kind": "interface",
+          "signature": "SpinnerContainerProps extends SpinnerProps",
+          "summary": "Adds isVisible, backdropColor, message, onBackdropPress."
+        },
+        {
+          "name": "InlineSpinnerProps",
+          "kind": "interface",
+          "signature": "InlineSpinnerProps extends SpinnerProps",
+          "summary": "Adds text, direction, gap."
+        }
+      ],
+      "embeddingText": "Spinner is a fluent-styles loading indicator family. Spinner is inline. SpinnerContainer is full-screen modal overlay. InlineSpinner is compact row/column spinner with text. Variants: default, primary, success, warning, danger. Sizes: small(30), medium(50), large(80). Export confirmed in src/index.ts.",
+      "rawContent": "Component Spinner/SpinnerContainer/InlineSpinner. Category feedback. Exported from fluent-styles via src/index.ts. Source: src/package/spinner/index.tsx. Three-member family. Related: StyledButton, StyledDialog.",
+      "metadata": {
+        "platform": [
+          "react-native"
+        ],
+        "packageName": "fluent-styles",
+        "extractionConfidence": 0.98,
+        "verifiedAt": "2026-03-08",
+        "notes": "Fully verified from source. Three-member family, variant config, size map, overlay behavior confirmed."
       }
     }
   ]
