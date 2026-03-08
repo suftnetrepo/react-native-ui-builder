@@ -2,7 +2,7 @@
 
 ## Overview
 
-This session fixed three runtime pipeline errors and expanded the RAG component dataset from 10 to 16 records by reading the `fluent-styles` source directly.
+This session fixed three runtime pipeline errors, expanded the RAG component dataset from 10 to 27 records (all verified), upgraded two previously inferred records, improved the README, and published the project to GitHub.
 
 ---
 
@@ -68,7 +68,7 @@ record_json->'variants' AS variants,
 
 ---
 
-## RAG Dataset Expansion
+## RAG Dataset — Batch 1 (10 → 16 records)
 
 ### Source inspected
 
@@ -105,28 +105,109 @@ No ID collisions. All 6 records appended cleanly.
 
 ---
 
+## RAG Dataset — Input Record Upgrade (inferred → verified)
+
+Two pre-existing records were `status: inferred` with `extractionConfidence: 0.55`. Full source inspection of `src/package/input/index.tsx` (250 lines) was performed.
+
+| Record ID | Before | After |
+|---|---|---|
+| `form-styledinput-overview` | inferred / 0.55 | verified / 0.97 |
+| `form-styledmultiinput-overview` | inferred / 0.55 | verified / 0.97 |
+
+Verified props for `StyledInput`: `label`, `labelProps`, `containerProps`, `errorMessage`, `error`, `errorProps`, `borderColor`, `multiline`, `numberOfLines`, `editable`, `placeholder`.
+
+---
+
+## RAG Dataset — Batch 2 (16 → 27 records)
+
+### Source inspected
+
+Workspace: `/Users/appdev/dev/fluent-styles/`
+
+Files read:
+- `src/index.ts` (re-read for full export surface)
+- `src/package/accordion/index.tsx`
+- `src/package/checkBox/index.tsx`
+- `src/package/header/index.tsx`
+- `src/package/icon/index.tsx`
+- `src/package/image/index.tsx`
+- `src/package/keyboardAvoidingView/index.tsx`
+- `src/package/radioButton/index.tsx`
+- `src/package/switch/index.tsx`
+- `src/package/cycle/index.tsx`
+- `src/package/separator/index.tsx`
+- `src/package/spinner/index.tsx`
+- `storyBook/demo/.rnstorybook/stories/Accordion.stories.tsx`
+- `storyBook/demo/.rnstorybook/stories/Header.stories.tsx`
+
+### New records generated
+
+Saved to `docs/rag/component-docs.next-batch.generated.json`, then merged into `component-docs.json`.
+
+| Record ID | Exports covered | Category | Confidence |
+|---|---|---|---|
+| `navigation-accordion-overview` | `Accordion` | navigation | 0.98 |
+| `form-checkbox-overview` | `CheckBox` | form | 0.98 |
+| `navigation-header-overview` | `StyledHeader`, `Header`, `Full` | navigation | 0.97 |
+| `helper-icon-overview` | `StyledIcon`, `IconBase` | helper | 0.98 |
+| `image-styledimage-overview` | `StyledImage`, `StyledImageBackground` | image | 0.98 |
+| `helper-keyboardavoidingview-overview` | `KeyboardAvoidingView`, `KeyboardAvoidingForm`, `KeyboardAvoidingPadding`, `KeyboardAwareContent` | helper | 0.98 |
+| `form-radiobutton-overview` | `RadioButton` | form | 0.98 |
+| `form-switch-overview` | `Switch`, `SwitchRow`, `GroupedSwitch` | form | 0.98 |
+| `helper-cycle-overview` | `StyledCycle`, `CycleBase` | helper | 0.98 |
+| `helper-separator-overview` | `Separator`, `SeparatorWithLabel`, `SeparatorGroup`, `DottedSeparator` | helper | 0.98 |
+| `feedback-spinner-overview` | `Spinner`, `SpinnerContainer`, `InlineSpinner` | feedback | 0.98 |
+
+---
+
 ## Final Dataset State — `component-docs.json`
 
-**Total: 16 records**
+**Total: 27 records — all verified**
 
 ### By category
 
 | Category | Count | Records |
 |---|---|---|
 | layout | 5 | Stack, XStack, YStack, StyledSpacer, StyledScrollView + HorizontalScrollView |
-| form | 3 | StyledInput, StyledMultiInput, Dropdown + MultiSelectDropdown |
+| form | 6 | StyledInput, StyledMultiInput, Dropdown + MultiSelectDropdown, CheckBox, RadioButton, Switch family |
+| helper | 4 | StyledIcon, KeyboardAvoidingView family, StyledCycle, Separator family |
 | dialog | 3 | StyledDialog, StyledConfirmDialog, StyledOkDialog |
+| navigation | 2 | StyledHeader + Header + Full, Accordion |
 | interaction | 2 | StyledButton + Button, Pressable family |
 | card | 1 | StyledCard |
 | display | 1 | Badge family |
+| feedback | 1 | Spinner family |
+| image | 1 | StyledImage + StyledImageBackground |
 | typography | 1 | StyledText |
 
 ### By status
 
-| Status | Count | Notes |
-|---|---|---|
-| verified | 14 | Grounded in source code and/or stories |
-| inferred | 2 | `form-styledinput-overview`, `form-styledmultiinput-overview` — pre-existing, no source upgrade available in this session |
+| Status | Count |
+|---|---|
+| verified | 27 |
+| inferred | 0 |
+
+---
+
+## README
+
+Replaced the default Next.js README with a full project README covering:
+- What it does (RAG-powered React Native screen generator)
+- How it works (4-step pipeline diagram)
+- Tech stack table
+- Prerequisites and environment setup
+- Step-by-step install, DB setup, ingest, and dev server instructions
+- API routes table with curl example
+- Project structure tree
+- Component docs schema reference
+
+---
+
+## Git / GitHub
+
+- Initialized git repository in `/Users/appdev/dev/rn-ui-builder`
+- Resolved SSH authentication for `git@github.com:suftnetrepo/react-native-ui-builder.git`
+- Committed all workspace files and pushed to `main`
 
 ---
 
@@ -137,5 +218,7 @@ No ID collisions. All 6 records appended cleanly.
 | `scripts/ingest-component-docs.js` | Fixed dotenv/pool ordering; rewrote upsert query to match real DB schema |
 | `src/app/api/search-components/route.js` | Extract `summary`, `generation_hints` from `record_json` |
 | `src/lib/rag/searchComponents.js` | Extract `summary`, `generation_hints`, `examples`, `props`, `variants` from `record_json` |
-| `component-docs.json` | Expanded from 10 → 16 records |
-| `docs/rag/component-docs.missing.generated.json` | New file — 6 generated records before merge |
+| `component-docs.json` | Expanded 10 → 16 → 27 records, all verified |
+| `docs/rag/component-docs.missing.generated.json` | New — batch 1 intermediate file (6 records) |
+| `docs/rag/component-docs.next-batch.generated.json` | New — batch 2 intermediate file (11 records) |
+| `README.md` | Full rewrite with project documentation |

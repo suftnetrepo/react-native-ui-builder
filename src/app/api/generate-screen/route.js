@@ -33,6 +33,37 @@ export async function POST(request) {
 
     const validation = validateGeneratedCode(code);
 
+    let finalCode = code;
+    let finalValidation = validation;
+
+    if (!validation.valid) {
+      const repairPrompt = `
+      The previous generated React Native code failed validation.
+
+      Validation issues:
+      ${validation.issues.map((i) => `- ${i}`).join('\n')}
+
+      Rewrite the code to fix all issues.
+
+      Rules:
+      - Return only code
+      - Do not use ScrollView from react-native
+      - Do not use Pressable from react-native
+      - Use fluent-styles exports instead
+      - Keep declarative props
+      - Do not introduce TypeScript syntax
+      - Keep the same screen behavior
+      `;
+
+      const repairResponse = await openai.responses.create({
+        model: 'gpt-5',
+        input: `${fullPrompt}\n\nPrevious code:\n${code}\n\n${repairPrompt}`,
+      });
+
+      finalCode = repairResponse.output_text || code;
+      finalValidation = validateGeneratedCode(finalCode);
+    }
+
     return NextResponse.json({
       ok: true,
       prompt,
@@ -42,8 +73,8 @@ export async function POST(request) {
         category: c.category,
         similarity: c.similarity,
       })),
-      code,
-      validation, 
+      code: finalCode,
+      validation: finalValidation,
     });
   } catch (error) {
     console.error('Generate screen failed:', error);

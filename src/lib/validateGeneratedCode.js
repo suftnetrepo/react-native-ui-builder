@@ -9,6 +9,14 @@ export function validateGeneratedCode(code) {
     issues.push('Raw React Native Pressable used instead of package Pressable');
   }
 
+  if (/import\s*\{\s*[^}]*\bScrollView\b[^}]*\}\s*from\s*['"]fluent-styles['"]/.test(code)) {
+    issues.push('Invalid fluent-styles import: use StyledScrollView instead of ScrollView');
+  }
+
+  if (/<ScrollView\b/.test(code)) {
+    issues.push('Invalid component usage: use StyledScrollView instead of ScrollView');
+  }
+
   if (/<StyledText[^>]*style=\{\{[^}]*color:/s.test(code)) {
     issues.push('StyledText uses style.color instead of color prop');
   }

@@ -50,6 +50,18 @@ Import rules:
 - Import package components from "fluent-styles"
 - Import theme from "fluent-styles" when theme tokens are used
 - Prefer package scroll components over raw React Native ScrollView when available
+- Do not import ScrollView from fluent-styles
+- Use StyledScrollView from fluent-styles for vertical scrolling
+- Use HorizontalScrollView from fluent-styles for horizontal scrolling
+- Pressable may be imported from fluent-styles
+- Do not invent export names that are not present in the retrieved docs or src/index.ts
+
+Hard bans:
+- Do not import ScrollView from react-native
+- Do not import Pressable from react-native
+- Do not import ScrollView from fluent-styles
+- Do not use <ScrollView>
+- Use <StyledScrollView> for vertical scroll containers
 
 Declarative syntax rules:
 - For StyledText, use declarative props instead of style for:
